@@ -30,7 +30,7 @@ const Banner = () => {
 	return (
 		<div className={styles.bannerContainer}>
 			{banner.map((item, i) => (
-				<div className={styles.bannerItem}>
+				<div className={styles.bannerItem} key={i}>
 					<FontAwesomeIcon icon={item.icon} className={styles.icon} />
 					<div className={styles.textContainer}>
 						<h3>{item.title}</h3>

@@ -9,7 +9,7 @@ const Categories = () => {
 			<h1>Our Product Categories</h1>
 			<div className={styles.cardContainer}>
 				{categoryData.map(item => (
-					<div className={styles.card}>
+					<div className={styles.card} key={item.id}>
 						<Image
 							src={item.image}
 							width={150}

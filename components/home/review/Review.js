@@ -24,7 +24,7 @@ const Review = () => {
 			</div>
 			<div className={styles.blogContainer}>
 				{blogData.map(item => (
-					<div className={styles.blog}>
+					<div className={styles.blog} key={item.id}>
 						<Image
 							src={item.image}
 							height={100}
