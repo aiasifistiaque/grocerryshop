@@ -1,0 +1,45 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+%horizontal-ads {
+	display: flex;
+	flex: 1;
+	background-position: center;
+	background-size: cover;
+	min-height: 70vh;
+	margin: 0.5em;
+	border-radius: 4px;
+	cursor: pointer;
+
+	@include desktop {
+		transition: all 0.2s;
+		background-size: cover;
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+}
+
+.adTwoSection {
+	display: flex;
+	//min-height: 100vh;
+	margin: 2% 0;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+	}
+
+	.adOne {
+		@extend %horizontal-ads;
+		background-image: url('../../../public/ads/ver1.jpeg');
+	}
+	.adTwo {
+		@extend %horizontal-ads;
+		background-image: url('../../../public/ads/ver2.jpeg');
+	}
+	.adThree {
+		@extend %horizontal-ads;
+		background-image: url('../../../public/ads/ver3.jpeg');
+	}
+}

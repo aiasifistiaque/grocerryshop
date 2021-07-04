@@ -1,0 +1,50 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+@include google-font('Montserrat');
+@include google-font('Nunito');
+
+.bannerContainer {
+	display: flex;
+	background-color: $secondaryColor;
+	padding: 5%;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.bannerItem {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		margin: 1em;
+		@include desktop {
+			margin: 0;
+		}
+
+		.icon {
+			height: 30px;
+			color: white;
+		}
+		.textContainer {
+			display: flex;
+			flex-direction: column;
+			color: white;
+			justify-content: space-evenly;
+			margin: 0 1.5em;
+			letter-spacing: 1px;
+
+			h3 {
+				font-family: Montserrat;
+			}
+			p {
+				font-family: Nunito;
+				font-size: 0.9em;
+				margin-top: 0.2em;
+			}
+		}
+	}
+}

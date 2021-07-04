@@ -1,0 +1,181 @@
+/* Margin */
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 1.5rem;
+}
+
+.px-3 {
+  padding: 0 2rem;
+}
+
+.px-4 {
+  padding: 0 3rem;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.adTwoSection .adOne, .adTwoSection .adTwo, .adTwoSection .adThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+  margin: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .adTwoSection .adOne, .adTwoSection .adTwo, .adTwoSection .adThree {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background-size: cover;
+  }
+  .adTwoSection .adOne:hover, .adTwoSection .adTwo:hover, .adTwoSection .adThree:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+
+.adTwoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2% 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1008px) {
+  .adTwoSection {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.adTwoSection .adOne {
+  background-image: url("../../../public/ads/ver1.jpeg");
+}
+
+.adTwoSection .adTwo {
+  background-image: url("../../../public/ads/ver2.jpeg");
+}
+
+.adTwoSection .adThree {
+  background-image: url("../../../public/ads/ver3.jpeg");
+}
+/*# sourceMappingURL=AdTwo.module.css.map */

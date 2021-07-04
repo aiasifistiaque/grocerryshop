@@ -1,0 +1,59 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+%horizontal-ads {
+	background-position: center;
+	background-size: cover;
+	min-height: 25vh;
+	margin: 0.5em;
+	border-radius: 4px;
+	cursor: pointer;
+	overflow: hidden;
+
+	@include desktop {
+		overflow: hidden;
+		position: relative;
+		height: 50vh;
+		transition: all 0.2s;
+		background-size: cover;
+
+		&:hover {
+			transform: scaleY(1.02);
+		}
+	}
+}
+
+.adSection {
+	display: flex;
+	//min-height: 100vh;
+	flex-direction: column;
+
+	.topAd {
+		display: flex;
+		flex: 1;
+		@extend %horizontal-ads;
+		background-image: url('../../../public/ads/horizontal.jpeg');
+	}
+	.bottom {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+
+		@include tab {
+			flex-direction: row;
+		}
+
+		.bottomAdOne {
+			display: flex;
+			flex: 1;
+			@extend %horizontal-ads;
+			background-image: url('../../../public/ads/horone.jpeg');
+		}
+		.bottomAdTwo {
+			display: flex;
+			flex: 1;
+			@extend %horizontal-ads;
+			background-image: url('../../../public/ads/hortwo.jpeg');
+		}
+	}
+}

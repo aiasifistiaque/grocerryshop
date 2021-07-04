@@ -1,0 +1,17 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+@include google-font('Montserrat');
+@include google-font('Nunito');
+
+.footer {
+	background-color: $primaryColor;
+	padding: 0.5em 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	p {
+		color: white;
+		font-size: 0.8em;
+		letter-spacing: 2px;
+	}
+}

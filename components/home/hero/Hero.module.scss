@@ -1,0 +1,33 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+@include google-font('Montserrat');
+
+.heroContainer {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../../../public/hero.jpeg');
+	background-position: center;
+	background-size: cover;
+	.overlay {
+		@include flexCenter(column);
+		width: 100%;
+		min-height: 70vh;
+		background-color: rgba(black, 0.5);
+		padding: 10%;
+		text-align: center;
+		h1 {
+			font-size: 2em;
+			font-family: Montserrat;
+			color: white;
+			letter-spacing: 4px;
+			font-weight: 700;
+			text-shadow: 4px 4px 5px rgba(black, 0.1);
+			@include tab {
+				font-size: 3em;
+			}
+		}
+	}
+}

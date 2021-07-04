@@ -1,0 +1,124 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+@include google-font('Montserrat');
+@include google-font('Nunito');
+
+.reviewSection {
+	display: flex;
+	min-height: 40vh;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+	}
+	.review {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		@include desktop {
+			flex: 2;
+		}
+		box-shadow: $box-shadow;
+		margin: 0.5em;
+		background-color: white;
+		border-radius: 5px;
+		padding: 5%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		.image {
+			object-fit: cover;
+			object-position: top;
+			border-radius: 500px;
+		}
+		blockquote {
+			font-family: Nunito;
+			font-size: 0.9em;
+			color: lighten(black, 50);
+			line-height: 2em;
+			font-style: italic;
+			letter-spacing: 1px;
+			font-weight: 500;
+		}
+		p {
+			font-family: Montserrat;
+			font-size: 0.9em;
+		}
+	}
+	.blogContainer {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		margin-right: 1em;
+
+		@include desktop {
+			flex: 3;
+		}
+
+		.blog {
+			display: flex;
+			padding: 3%;
+			box-sizing: border-box;
+			flex: 1;
+			width: 100%;
+			background-color: white;
+			box-shadow: $box-shadow;
+			margin: 0.5em;
+			border-radius: 5px;
+			flex-direction: column;
+
+			@include desktop {
+				flex-direction: row;
+			}
+
+			.blogImage {
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.textContainer {
+				flex: 1;
+				margin: 0.5em 0;
+
+				@include desktop {
+					margin: 0.5em 1.5em;
+				}
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				h3 {
+					font-family: Nunito;
+					font-size: 1em;
+				}
+				p {
+					font-family: Nunito;
+					font-size: 0.9em;
+					color: lighten(black, 50);
+					margin: 0.5em 0;
+				}
+				.button {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					@include btn-text-unselect;
+					background-color: darkslateblue;
+					color: white;
+					max-width: 100px;
+					height: 30px;
+					border-radius: 500px;
+					font-size: 0.8em;
+					font-weight: 600;
+					cursor: pointer;
+					&:hover {
+						background-color: darken(darkslateblue, 10);
+					}
+					&:active {
+						background-color: lighten(darkslateblue, 20);
+					}
+				}
+			}
+		}
+	}
+}

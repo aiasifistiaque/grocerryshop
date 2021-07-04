@@ -1,0 +1,68 @@
+//
+@import '../../../styles/imports';
+$nav-padding: 0 2%;
+.navbar {
+	display: flex;
+	position: fixed;
+	z-index: 99;
+	@include desktop {
+		display: inline-flex;
+	}
+
+	width: 100%;
+	background-color: $secondaryColor;
+	justify-content: space-between;
+	height: 10vh;
+	min-height: 50px;
+	align-items: center;
+	max-width: 100vw;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	letter-spacing: 2px;
+
+	.navbrand {
+		padding: $nav-padding;
+		cursor: pointer;
+		flex: 1;
+		color: white;
+
+		a {
+			@include btn-text-unselect;
+			font-size: 1.6em;
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: -5px;
+		}
+	}
+
+	.navRight {
+		display: flex;
+
+		@include tab {
+			padding: $nav-padding;
+		}
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		@include btn-text-unselect;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		a {
+			margin: 0 0.5em;
+			@include tab {
+				margin: 0 1em;
+			}
+		}
+	}
+
+	.navcollapseStraight {
+		padding: $nav-padding;
+		@include btn-text-unselect;
+		cursor: pointer;
+		transition: 0.5s;
+		height: 16px;
+		color: white;
+	}
+}

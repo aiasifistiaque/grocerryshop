@@ -1,0 +1,28 @@
+@mixin btn-text-unselect {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+$desktop: 1008px;
+$tab: 640px;
+
+@mixin tab {
+	@media (min-width:#{$tab}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width:#{$desktop}) {
+		@content;
+	}
+}
+
+@mixin flexCenter($direction: row) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+}
