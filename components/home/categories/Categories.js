@@ -3,7 +3,6 @@ import styles from './Categories.module.scss';
 import categoryData from '../../../data/categoryData';
 import Image from 'next/image';
 import Link from 'next/link';
-import LinkWrapper from '../../LinkWrapper';
 
 const Categories = () => {
 	return (
@@ -12,8 +11,8 @@ const Categories = () => {
 
 			<div className={styles.cardContainer}>
 				{categoryData.map(item => (
-					<Link href={`/category/${item.name}`}>
-						<div className={styles.card} key={item.id}>
+					<Link href={`/category/${item.name}`} key={item.id}>
+						<div className={styles.card}>
 							<Image
 								src={item.image}
 								width={150}

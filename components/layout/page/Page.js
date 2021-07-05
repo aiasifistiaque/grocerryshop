@@ -15,12 +15,12 @@ const Page = ({ children, style }) => {
 				<meta name='description' content=';asdlka' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<NavBar
+			{/* <NavBar
 				barPressed={openNav}
 				open={() => setOpenNav(true)}
 				close={() => setOpenNav(false)}
 				select={item => setScrollItem(item)}
-			/>
+			/> */}
 
 			<main
 				//className={openNav ? styles.containerOverLay : styles.container}

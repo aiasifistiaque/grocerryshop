@@ -1,12 +1,9 @@
 import React from 'react';
-import { useRouter } from 'next/dist/client/router';
 import HomePage from '../../components/layout/HomePage/HomePage';
 import PorductList from '../../components/productlist/PorductList';
 import products from '../../data/productsData';
 
 const tag = () => {
-	const router = useRouter();
-	const { id } = router.query;
 	return (
 		<HomePage>
 			<PorductList
