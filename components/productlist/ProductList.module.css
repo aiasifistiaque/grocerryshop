@@ -1,0 +1,294 @@
+/* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 1.5rem;
+}
+
+.px-3 {
+  padding: 0 2rem;
+}
+
+.px-4 {
+  padding: 0 3rem;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.plContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15vh 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1008px) {
+  .plContainer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.plContainer h2 {
+  text-align: center;
+  font-family: Montserrat;
+}
+
+@media (min-width: 1008px) {
+  .plContainer h2 {
+    text-align: left;
+    margin: 0 3%;
+  }
+}
+
+.plContainer .cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.plContainer .cardContainer .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.2em;
+  padding: 1em 0;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  align-items: center;
+  text-align: center;
+  max-width: 160px;
+  border: 1px solid transparent;
+}
+
+.plContainer .cardContainer .card .prod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding: 0 2em;
+  padding-top: 1em;
+  margin: 1em 0;
+}
+
+.plContainer .cardContainer .card .prod .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.plContainer .cardContainer .card .prod h3 {
+  font-family: Montserrat;
+  font-size: 0.9em;
+  margin: 0.5em 0;
+  line-height: 1.5em;
+}
+
+.plContainer .cardContainer .card .prod p {
+  font-size: 0.7em;
+}
+
+.plContainer .cardContainer .card .prod h2 {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+}
+
+@media (min-width: 1008px) {
+  .plContainer .cardContainer .card .prod {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .plContainer .cardContainer .card .prod:hover {
+    -webkit-transform: scale(1.11);
+            transform: scale(1.11);
+    background-color: whitesmoke;
+  }
+  .plContainer .cardContainer .card .prod:hover h3 {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+}
+
+.plContainer .cardContainer .card a {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border: 1px solid #e6e6e6;
+  padding: 0.5em 2em;
+  white-space: nowrap;
+  font-size: 0.8em;
+  color: crimson;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 500px;
+}
+
+@media (min-width: 1008px) {
+  .plContainer .cardContainer .card a:hover {
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: white;
+  }
+}
+
+.plContainer .cardContainer .card a:active {
+  background-color: rgba(220, 20, 60, 0.1);
+  border: 1px solid rgba(220, 20, 60, 0.1);
+  color: white;
+}
+
+@media (min-width: 1008px) {
+  .plContainer .cardContainer .card {
+    margin: 1em;
+  }
+}
+/*# sourceMappingURL=ProductList.module.css.map */

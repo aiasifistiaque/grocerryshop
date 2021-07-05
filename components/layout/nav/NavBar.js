@@ -7,6 +7,7 @@ import {
 	faShoppingCart,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 const NavBar = ({ barPressed, open, close }) => {
 	return (
@@ -42,7 +43,9 @@ const NavRightIcon = ({ icon }) => {
 const NavBrand = () => {
 	return (
 		<>
-			<a>BAAL SAAL</a>
+			<Link href='/'>
+				<a>BAAL SAAL</a>
+			</Link>
 		</>
 	);
 };

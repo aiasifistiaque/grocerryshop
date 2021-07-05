@@ -8,18 +8,14 @@ import useGetWindowSize from '../../../hooks/useGetWindowSize';
 import Sidebar from '../sidebar/Sidebar';
 import Footer from '../footer/Footer';
 
-const HomePage = ({ children, style, inv }) => {
+const HomePageInv = ({ children, style }) => {
 	const { isDesktop } = useGetWindowSize();
 	const [openNav, setOpenNav] = useState(false);
-	useEffect(() => {
-		if (isDesktop) {
-			!inv && setOpenNav(true);
-		}
-	}, [isDesktop]);
+
 	return (
 		<div>
 			<Head>
-				<title>ecoomerce</title>
+				<title>ecomerce</title>
 				<meta name='description' content=';asdlka' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -47,4 +43,4 @@ const HomePage = ({ children, style, inv }) => {
 	);
 };
 
-export default HomePage;
+export default HomePageInv;

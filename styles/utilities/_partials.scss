@@ -1,0 +1,14 @@
+%prod-partial {
+	flex: 1;
+	align-items: flex-start;
+	width: 100%;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+		padding-top: 20vh;
+		margin: 0 10%;
+		width: 70%;
+		box-shadow: 0 0 10px rgba(black, 0.1);
+	}
+}

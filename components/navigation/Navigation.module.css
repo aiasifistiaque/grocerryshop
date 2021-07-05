@@ -1,0 +1,27 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 3% 1em 3%;
+  font-size: 0.8em;
+}
+
+.navigation a {
+  color: crimson;
+  cursor: pointer;
+}
+
+.navigation a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.navigation p {
+  color: black;
+  font-weight: 600;
+}
+
+.navigation span {
+  margin: 0 0.5em;
+}
+/*# sourceMappingURL=Navigation.module.css.map */

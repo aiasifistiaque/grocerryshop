@@ -6,6 +6,7 @@ const categoryData = [
 		name: 'Grocery & Food',
 		image: '/categoryImages/image.png',
 	},
+
 	{
 		id: 2,
 		name: 'Meat & Fish',

@@ -1,0 +1,113 @@
+@import '../../styles/imports';
+@import '../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+.productPage {
+	margin-top: 15vh;
+	@include flexCenter;
+	padding: 5%;
+	flex: 1;
+	align-items: flex-start;
+	width: 100%;
+	flex-direction: column;
+	@include tab {
+		flex-direction: row;
+		margin-bottom: 0.5em;
+	}
+
+	@include desktop {
+		flex-direction: row;
+		padding-top: 20vh;
+		margin: 0 10%;
+		width: 70%;
+		box-shadow: 0 0 10px rgba(black, 0.1);
+		margin-bottom: 0.5em;
+	}
+	.image {
+		flex: 1;
+	}
+	.details {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		padding: 1em 0;
+		padding-top: 4em;
+		width: 100%;
+		@include tab {
+			padding: 0 10%;
+		}
+		@include desktop {
+			padding: 1em 5em;
+		}
+
+		.review {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 2em;
+			.icon {
+				color: #d5d5d5;
+				height: 18px;
+				margin-right: 2px;
+			}
+			p {
+				margin: 0 0.5em;
+				font-family: Montserrat;
+			}
+		}
+		h2 {
+			font-family: Montserrat;
+			margin-bottom: 0.5em;
+		}
+		p {
+			margin-bottom: 0.5em;
+		}
+
+		h3 {
+			margin: 0.5em 0;
+			font-size: 1.5em;
+			color: $secondaryColor;
+			font-family: Montserrat;
+		}
+		.inStock {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+			color: teal;
+			p {
+				font-family: Montserrat;
+				margin: 0 0.5em;
+				font-size: 0.9em;
+			}
+			.icon {
+				color: inherit;
+				height: 15px;
+			}
+		}
+		a {
+			@include btn-text-unselect;
+			display: inline-flex;
+			white-space: nowrap;
+			align-items: center;
+			justify-content: center;
+			background-color: crimson;
+			color: white;
+			width: 150px;
+			height: 38px;
+			border-radius: 500px;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: 600;
+			letter-spacing: 1px;
+			@include desktop {
+				padding: 1em;
+				&:hover {
+					background-color: darken(crimson, 5);
+				}
+			}
+			&:active {
+				background-color: lighten(crimson, 40);
+			}
+		}
+	}
+}

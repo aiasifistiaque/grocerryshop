@@ -2,6 +2,7 @@ import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './Sidebar.module.css';
 import categoryData from '../../../data/categoryData';
+import Link from 'next/link';
 
 const Sidebar = ({ barPressed }) => {
 	const springStyle = useSpring({
@@ -25,7 +26,9 @@ const NavItems = () => {
 	return (
 		<>
 			{categoryData.map(item => (
-				<a key={item.id}>{item.name}</a>
+				<Link key={item.id} href={`/category/${item.name}`}>
+					<a>{item.name}</a>
+				</Link>
 			))}
 
 			<a>About</a>

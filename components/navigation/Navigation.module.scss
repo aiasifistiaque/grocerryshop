@@ -1,0 +1,19 @@
+.navigation {
+	display: flex;
+	margin: 0 3% 1em 3%;
+	font-size: 0.8em;
+	a {
+		color: crimson;
+		cursor: pointer;
+		&:hover {
+			text-decoration-line: underline;
+		}
+	}
+	p {
+		color: black;
+		font-weight: 600;
+	}
+	span {
+		margin: 0 0.5em;
+	}
+}
