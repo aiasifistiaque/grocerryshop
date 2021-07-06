@@ -1,4 +1,19 @@
 //
+const allCategories = [
+	[
+		'Automobile Essential',
+		'Best Offer',
+		'Grocery & Food',
+		'Health & Beauty',
+		'Home Appliance',
+		'Home Cleaning',
+		"Kid's Zone",
+		'Medical Device',
+		'Organic Products',
+		'Pet Care',
+		'Regular Products',
+	],
+];
 
 const categoryData = [
 	{
@@ -9,42 +24,42 @@ const categoryData = [
 
 	{
 		id: 2,
-		name: 'Meat & Fish',
+		name: 'Regular Products',
 		image: '/categoryImages/meat.png',
 	},
 	{
 		id: 3,
-		name: 'Cooking',
+		name: 'Best Offer',
 		image: '/categoryImages/cooking.png',
 	},
 	{
 		id: 4,
-		name: 'Home & Cleaning',
+		name: 'Home Cleaning',
 		image: '/categoryImages/clean.png',
 	},
 	{
 		id: 5,
-		name: 'Beverages',
+		name: 'Regular Products',
 		image: '/categoryImages/beverages.png',
 	},
 	{
 		id: 6,
-		name: 'Pest Control',
+		name: 'Organic Products',
 		image: '/categoryImages/pest.png',
 	},
 	{
 		id: 7,
-		name: 'Office Prodcuts',
+		name: 'Automobile Essential',
 		image: '/categoryImages/office.png',
 	},
 	{
 		id: 8,
-		name: 'Beauty Products',
+		name: 'Health & Beauty',
 		image: '/categoryImages/beauty.png',
 	},
 	{
 		id: 9,
-		name: 'Health Producrs',
+		name: 'Medical Device',
 		image: '/categoryImages/health.png',
 	},
 	{
@@ -54,12 +69,12 @@ const categoryData = [
 	},
 	{
 		id: 11,
-		name: 'Home Applicances',
+		name: 'Home Appliance',
 		image: '/categoryImages/appliances.png',
 	},
 	{
 		id: 12,
-		name: 'Baby Care',
+		name: "Kid's Zone",
 		image: '/categoryImages/baby.png',
 	},
 ];

@@ -11,7 +11,7 @@ const Navigation = ({ links, current }) => {
 			<span>{'/'}</span>
 			{links.map((item, i) => (
 				<>
-					<Link href={item.to}>
+					<Link href={item.to} key={i}>
 						<a>{item.name}</a>
 					</Link>
 					<span>{'/'}</span>

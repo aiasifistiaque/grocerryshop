@@ -13,7 +13,7 @@ const SubCategories = ({ links, data, to }) => {
 		<div className={styles.scContainer}>
 			<Navigation current={id} links={links} />
 
-			<h2>{id}</h2>
+			<h2>Sub Categories {`(${id})`}</h2>
 			<div className={styles.cardContainer}>
 				{data.map((item, i) => (
 					<Link href={`${to}/${item.name}`} key={i}>

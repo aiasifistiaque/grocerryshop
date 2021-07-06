@@ -21,9 +21,7 @@
 	h2 {
 		font-family: Montserrat;
 		margin-bottom: 1em;
-		@include desktop {
-			margin-top: 15vh;
-		}
+		margin-top: 15vh;
 	}
 	p {
 		text-align: center;

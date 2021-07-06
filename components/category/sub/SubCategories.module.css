@@ -131,6 +131,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 15vh 5%;
+  padding-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -11,7 +11,7 @@ const Related = ({ items }) => {
 				{items.map(
 					(item, i) =>
 						i < 4 && (
-							<Link href={`/product/${item.name}`}>
+							<Link href={`/product/${item._id}`} key={i}>
 								<div className={styles.card}>
 									<Image
 										src={item.image}

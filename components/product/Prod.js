@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from './Prod.module.css';
 import Image from 'next/image';
-import productData from '../../data/product';
 import { faStar, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Prod = () => {
+const Prod = ({ productData }) => {
 	return (
 		<div className={styles.productPage}>
 			<Image src={productData.image} height={300} width={300} />

@@ -1,0 +1,16 @@
+//@include
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+.loading {
+	display: flex;
+	flex: 1;
+	margin: 2em auto;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+	h3 {
+		font-family: Montserrat;
+		font-size: 2em;
+	}
+}

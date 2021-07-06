@@ -165,12 +165,7 @@
 .register h2 {
   font-family: Montserrat;
   margin-bottom: 1em;
-}
-
-@media (min-width: 1008px) {
-  .register h2 {
-    margin-top: 15vh;
-  }
+  margin-top: 15vh;
 }
 
 .register p {
