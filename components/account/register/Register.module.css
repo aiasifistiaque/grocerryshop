@@ -1,0 +1,236 @@
+/* Margin */
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 1.5rem;
+}
+
+.px-3 {
+  padding: 0 2rem;
+}
+
+.px-4 {
+  padding: 0 3rem;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  margin-top: 15vh;
+  margin: auto;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 10%;
+}
+
+@media (min-width: 640px) {
+  .register {
+    padding: 0 20%;
+  }
+}
+
+@media (min-width: 1008px) {
+  .register {
+    width: 60%;
+    padding: 0 15%;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.register h2 {
+  font-family: Montserrat;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 1008px) {
+  .register h2 {
+    margin-top: 15vh;
+  }
+}
+
+.register p {
+  text-align: center;
+  width: 80%;
+  margin: 1em auto;
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+
+@media (min-width: 640px) {
+  .register p {
+    width: 70%;
+    margin: 1em 0;
+    text-align: left;
+  }
+}
+
+.register p a {
+  color: crimson;
+  cursor: pointer;
+}
+
+.register p a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.register h4 {
+  margin: 1em auto;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+@media (min-width: 640px) {
+  .register h4 {
+    margin: 1em 0;
+  }
+}
+
+.register h4 a {
+  color: dodgerblue;
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.register .forgotPassword {
+  color: dodgerblue;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-align: center;
+  margin: 0.5em auto 0 auto;
+}
+
+@media (min-width: 640px) {
+  .register .forgotPassword {
+    margin: 0.5em 0 0 0;
+  }
+}
+/*# sourceMappingURL=Register.module.css.map */

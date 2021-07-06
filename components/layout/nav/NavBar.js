@@ -26,6 +26,9 @@ const NavBar = ({ barPressed, open, close }) => {
 					<NavRightIcon icon={faSearch} />
 					<NavRightIcon icon={faUser} />
 					<NavRightIcon icon={faShoppingCart} />
+					<Link href='/login'>
+						<a>Login</a>
+					</Link>
 				</div>
 			</div>
 		</>

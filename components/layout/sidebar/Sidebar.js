@@ -13,7 +13,7 @@ const Sidebar = ({ barPressed }) => {
 			x: barPressed ? '0%' : '-120%',
 		},
 
-		delay: 100,
+		delay: 10,
 	});
 	return (
 		<animated.div className={styles.sidebar} style={springStyle}>

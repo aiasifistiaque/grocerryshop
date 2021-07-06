@@ -1,0 +1,74 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+.register {
+	@include flexCenter(column);
+	flex: 1;
+	width: 100%;
+	margin-top: 15vh;
+	margin: auto;
+	height: 100%;
+	align-items: flex-start;
+	padding: 0 10%;
+	@include tab {
+		padding: 0 20%;
+	}
+	@include desktop {
+		width: 60%;
+		padding: 0 15%;
+		box-shadow: 0 0 10px rgba(black, 0.1);
+	}
+	h2 {
+		font-family: Montserrat;
+		margin-bottom: 1em;
+		@include desktop {
+			margin-top: 15vh;
+		}
+	}
+	p {
+		text-align: center;
+		width: 80%;
+		margin: 1em auto;
+		line-height: 1.5em;
+
+		@include tab {
+			width: 70%;
+			margin: 1em 0;
+			text-align: left;
+		}
+		font-size: 0.8em;
+
+		a {
+			color: crimson;
+			cursor: pointer;
+			&:hover {
+				text-decoration-line: underline;
+			}
+		}
+	}
+	h4 {
+		margin: 1em auto;
+		font-weight: 400;
+		font-size: 1.1em;
+		@include tab {
+			margin: 1em 0;
+		}
+
+		a {
+			color: dodgerblue;
+			cursor: pointer;
+			text-decoration-line: underline;
+		}
+	}
+	.forgotPassword {
+		color: dodgerblue;
+		text-decoration-line: none;
+		font-size: 0.9em;
+		cursor: pointer;
+		text-align: center;
+		margin: 0.5em auto 0 auto;
+		@include tab {
+			margin: 0.5em 0 0 0;
+		}
+	}
+}
