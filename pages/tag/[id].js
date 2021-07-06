@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import HomePage from '../../components/layout/HomePage/HomePage';
 import PorductList from '../../components/productlist/PorductList';
-import products from '../../data/productsData';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/dist/client/router';
 import getProductsByCategoryAction from '../../store/actions/products/getProductsByCategoryAction';
 import Loading from '../../components/core/loading/Loading';
 
-const tag = () => {
+const Tag = () => {
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { id } = router.query;
@@ -46,4 +45,4 @@ const tag = () => {
 	);
 };
 
-export default tag;
+export default Tag;

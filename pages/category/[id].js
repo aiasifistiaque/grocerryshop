@@ -5,11 +5,11 @@ import subCategoryData from '../../data/subCategoryData';
 import PorductList from '../../components/productlist/PorductList';
 // import products from '../../data/productsData';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/dist/client/router';
+import { useRouter } from 'next/router';
 import getProductsByCategoryAction from '../../store/actions/products/getProductsByCategoryAction';
 import Loading from '../../components/core/loading/Loading';
 
-const category = () => {
+const Category = () => {
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { id } = router.query;
@@ -37,4 +37,4 @@ const category = () => {
 	);
 };
 
-export default category;
+export default Category;

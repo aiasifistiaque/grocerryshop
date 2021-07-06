@@ -8,7 +8,7 @@ import { useRouter } from 'next/dist/client/router';
 import getProductsByCategoryAction from '../../store/actions/products/getProductsByCategoryAction';
 import Loading from '../../components/core/loading/Loading';
 
-const subcategories = () => {
+const Subcategories = () => {
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { id } = router.query;
@@ -45,4 +45,4 @@ const subcategories = () => {
 	);
 };
 
-export default subcategories;
+export default Subcategories;

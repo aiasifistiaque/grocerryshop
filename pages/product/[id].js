@@ -12,7 +12,7 @@ import { useRouter } from 'next/dist/client/router';
 import getProductAction from '../../store/actions/products/getProductAction';
 import Loading from '../../components/core/loading/Loading';
 
-const product = () => {
+const Product = () => {
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { id } = router.query;
@@ -44,4 +44,4 @@ const product = () => {
 	);
 };
 
-export default product;
+export default Product;
