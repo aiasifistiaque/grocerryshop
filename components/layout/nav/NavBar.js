@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './NavBar.module.css';
 import {
 	faBars,
@@ -51,7 +51,7 @@ const NavBar = ({ barPressed, open, close }) => {
 	);
 };
 
-const NavRightIcon = React.forwardRef(({ icon, href }, ref) => {
+const NavRightIcon = forwardRef(({ icon, href }, ref) => {
 	return (
 		<a href={href} ref={ref}>
 			<FontAwesomeIcon icon={icon} height={15} />
