@@ -15,6 +15,7 @@ const Categories = () => {
 						<div className={styles.card}>
 							<Image
 								src={item.image}
+								alt={item.name}
 								width={150}
 								height={150}
 								className={styles.image}

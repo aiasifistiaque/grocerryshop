@@ -1,4 +1,5 @@
 /* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 .my-1 {
   margin: 1rem 0;
 }
@@ -266,6 +267,62 @@
 .productPage .details .inStock .icon {
   color: inherit;
   height: 15px;
+}
+
+.productPage .details .qty {
+  border-radius: 500px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+}
+
+.productPage .details .qty a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 0;
+  border: 1px solid crimson;
+  background-color: crimson;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+@media (min-width: 1008px) {
+  .productPage .details .qty a:hover {
+    border: 1px solid #ad102f;
+    background-color: #ad102f;
+  }
+}
+
+.productPage .details .qty a:active {
+  border: 1px solid #f594a7;
+  background-color: #fac3ce;
+}
+
+.productPage .details .qty p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.75em;
+  text-align: center;
+}
+
+.productPage .details .qty .left {
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+.productPage .details .qty .right {
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
 }
 
 .productPage .details a {

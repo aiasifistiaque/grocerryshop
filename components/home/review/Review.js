@@ -10,6 +10,7 @@ const Review = () => {
 			<div className={styles.review}>
 				<Image
 					src='/tommy.jpeg'
+					alt='customer'
 					height={80}
 					width={80}
 					className={styles.image}
@@ -26,6 +27,7 @@ const Review = () => {
 				{blogData.map(item => (
 					<div className={styles.blog} key={item.id}>
 						<Image
+							alt='blog'
 							src={item.image}
 							height={100}
 							width={200}

@@ -1,4 +1,6 @@
 //
+export const cartName = 'marncart';
+export const tokenName = 'marntoken';
 
 /**auth */
 export const logIn = 'LOG_IN';
@@ -8,6 +10,16 @@ export const logOut = 'LOG_OUT';
 export const addCartItem = 'ADD_CART_ITEM';
 export const removeCartItem = 'REMOVE_CART_ITEM';
 export const emptyCart = 'EMPTY_CART';
+
+/**signup */
+export const signupRequest = 'SIGNUP_REQUEST';
+export const signupSuccess = 'SIGNUP_SUCCESS';
+export const signupFail = 'SINGUP_FAIL';
+
+/**login */
+export const loginRequest = 'LOGIN_REQUEST';
+export const loginSuccess = 'LOGIN_SUCCESS';
+export const loginFail = 'LOGIN_FAIL';
 
 /**product list*/
 export const getProductListRequest = 'GET_PRODUCT_LIST_REQUEST';

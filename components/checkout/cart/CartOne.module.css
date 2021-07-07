@@ -1,0 +1,380 @@
+/* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 1.5rem;
+}
+
+.px-3 {
+  padding: 0 2rem;
+}
+
+.px-4 {
+  padding: 0 3rem;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.cartOneContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15vh 4% 10vh 4%;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer {
+    text-align: left;
+    width: 80%;
+  }
+}
+
+.cartOneContainer h2 {
+  font-family: Montserrat;
+}
+
+.cartOneContainer .cardContainer {
+  padding: 1em 0;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer {
+    padding: 2em 0;
+  }
+}
+
+.cartOneContainer .cardContainer .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1em 0;
+  text-align: left;
+}
+
+.cartOneContainer .cardContainer .card .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 25px;
+}
+
+.cartOneContainer .cardContainer .card h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.25em;
+  font-family: Montserrat;
+  font-size: 0.7em;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .card h3 {
+    font-size: 1em;
+  }
+}
+
+.cartOneContainer .cardContainer .card p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.25em;
+  font-size: 0.8em;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .card p {
+    font-size: 1em;
+  }
+}
+
+.cartOneContainer .cardContainer .card .qty {
+  border-radius: 500px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cartOneContainer .cardContainer .card .qty a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 0;
+  border: 1px solid crimson;
+  background-color: crimson;
+  color: white;
+  padding: 0.25em 0.5em;
+}
+
+@media (min-width: 1008px) {
+  .cartOneContainer .cardContainer .card .qty a {
+    padding: 0.25em 0.75em;
+  }
+}
+
+@media (min-width: 1008px) {
+  .cartOneContainer .cardContainer .card .qty a:hover {
+    border: 1px solid #ad102f;
+    background-color: #ad102f;
+  }
+}
+
+.cartOneContainer .cardContainer .card .qty a:active {
+  border: 1px solid #f594a7;
+  background-color: #fac3ce;
+}
+
+.cartOneContainer .cardContainer .card .qty p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.75em;
+}
+
+.cartOneContainer .cardContainer .card .qty .left {
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+.cartOneContainer .cardContainer .card .qty .right {
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+}
+
+.cartOneContainer .cardContainer .card a {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border: 1px solid #e6e6e6;
+  padding: 0.5em 2em;
+  white-space: nowrap;
+  font-size: 0.8em;
+  color: crimson;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 500px;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .cartOneContainer .cardContainer .card a:hover {
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: white;
+  }
+}
+
+.cartOneContainer .cardContainer .card a:active {
+  background-color: rgba(220, 20, 60, 0.1);
+  border: 1px solid rgba(220, 20, 60, 0.1);
+  color: white;
+}
+
+.cartOneContainer .cardContainer .card .icon {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .cartOneContainer .cardContainer .card .icon:hover {
+    color: #333333;
+  }
+}
+
+.cartOneContainer .cardContainer .card .icon:active {
+  color: #999999;
+}
+
+.cartOneContainer .cardContainer .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 2%;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .total {
+    padding: 0;
+  }
+}
+
+.cartOneContainer .cardContainer .total .totalItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .total .totalItem {
+    width: 250px;
+    padding: 0;
+  }
+}
+
+.cartOneContainer .cardContainer .total p {
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+.cartOneContainer .cardContainer .total span {
+  font-weight: 600;
+  color: darkslateblue;
+  margin: 0.5em 0;
+  text-align: right;
+}
+
+.empty {
+  margin: auto;
+}
+
+.empty p {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: Montserrat;
+}
+/*# sourceMappingURL=CartOne.module.css.map */

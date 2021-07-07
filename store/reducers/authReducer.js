@@ -1,6 +1,16 @@
-import { logIn, logOut } from '../storeConstants';
+import { logIn, logOut, tokenName } from '../storeConstants';
 
-const initialState = { token: '', loggedIn: false };
+export const ISSERVER = typeof window === 'undefined';
+
+const tokenFromStorage =
+	!ISSERVER && localStorage.getItem(tokenName)
+		? JSON.parse(localStorage.getItem(tokenName))
+		: null;
+
+const initialState =
+	tokenFromStorage != null
+		? { token: tokenFromStorage, loggedIn: true }
+		: { token: null, loggedIn: false };
 
 const authReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -9,7 +19,7 @@ const authReducer = (state = initialState, action) => {
 			state.loggedIn = true;
 			return state;
 		case logOut:
-			state.token = '';
+			state.token = null;
 			state.loggedIn = false;
 			return state;
 		default:

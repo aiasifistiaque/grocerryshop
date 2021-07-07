@@ -1,0 +1,38 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+%core-buttons {
+	@include btn-text-unselect;
+	display: inline-flex;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: 600;
+	border-radius: 500px;
+	background-color: $thirdColor;
+	color: white;
+	letter-spacing: 1px;
+	@include desktop {
+		padding: 1em;
+		&:hover {
+			background-color: darken($thirdColor, 5);
+		}
+	}
+	&:active {
+		background-color: lighten($thirdColor, 40);
+	}
+}
+
+.buttonOne {
+	@extend %core-buttons;
+	width: 150px;
+	height: 38px;
+}
+
+.longButton {
+	@extend %core-buttons;
+	padding: 1em 2em;
+}

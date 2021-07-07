@@ -2,30 +2,44 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
+import { cartName, tokenName } from './storeConstants';
 
-const ISSERVER = typeof window === 'undefined';
+export const ISSERVER = typeof window === 'undefined';
 
 const cartItemsFromStorage =
-	!ISSERVER && localStorage.getItem('marncart')
-		? JSON.parse(localStorage.getItem('marncart'))
+	!ISSERVER && localStorage.getItem(cartName)
+		? JSON.parse(localStorage.getItem(cartName))
+		: [];
+
+const cartTotal =
+	!ISSERVER && localStorage.getItem(cartName)
+		? JSON.parse(localStorage.getItem(cartName))
 		: [];
 
 const tokenFromStorage =
-	!ISSERVER && localStorage.getItem('marncart')
-		? JSON.parse(localStorage.getItem('marncart'))
+	!ISSERVER && localStorage.getItem(tokenName)
+		? JSON.parse(localStorage.getItem(tokenName))
 		: null;
 
 const favItemsFromStorage =
-	!ISSERVER && localStorage.getItem('marncart')
-		? JSON.parse(localStorage.getItem('marncart'))
+	!ISSERVER && localStorage.getItem('marnfav')
+		? JSON.parse(localStorage.getItem('marnfav'))
 		: [];
+
+const loginState = {
+	isLogged: false,
+};
 
 const initialState = {
 	cart: {
 		cartItems: cartItemsFromStorage,
 	},
-	token: tokenFromStorage,
+	authState: {
+		token: tokenFromStorage,
+	},
+
 	favItems: { favItems: favItemsFromStorage },
+	logInfo: loginState,
 };
 
 const store = createStore(

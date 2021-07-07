@@ -4,3 +4,6 @@
 @import './utilities/paddings';
 @import './utilities/mixin';
 @import './utilities/partials';
+
+@import '../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+@include google-font('Montserrat');

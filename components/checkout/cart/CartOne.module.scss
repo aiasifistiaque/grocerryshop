@@ -1,0 +1,175 @@
+@import '../../../styles/imports';
+@import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
+
+.cartOneContainer {
+	display: flex;
+	padding: 15vh 4% 10vh 4%;
+	width: 100%;
+	margin: 0 auto;
+	flex-direction: column;
+	text-align: center;
+	flex: 1;
+
+	@include tab {
+		text-align: left;
+		width: 80%;
+	}
+	h2 {
+		font-family: Montserrat;
+	}
+	.cardContainer {
+		padding: 1em 0;
+		//border-bottom: 2px solid lighten(black, 80);
+
+		@include tab {
+			padding: 2em 0;
+		}
+
+		.card {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 1em 0;
+			text-align: left;
+			.image {
+				flex: 1;
+				min-width: 25px;
+			}
+			h3 {
+				flex: 1;
+				margin: 0 0.25em;
+				font-family: Montserrat;
+				font-size: 0.7em;
+				@include tab {
+					font-size: 1em;
+				}
+			}
+
+			p {
+				flex: 1;
+				margin: 0 0.25em;
+				font-size: 0.8em;
+				@include tab {
+					font-size: 1em;
+				}
+			}
+			.qty {
+				border-radius: 500px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				a {
+					flex: 1;
+					border-radius: 0;
+					border: 1px solid $thirdColor;
+					background-color: $thirdColor;
+					color: white;
+					padding: 0.25em 0.5em;
+					@include desktop {
+						padding: 0.25em 0.75em;
+					}
+					&:hover {
+						@include desktop {
+							border: 1px solid darken($thirdColor, 10);
+							background-color: darken($thirdColor, 10);
+						}
+					}
+					&:active {
+						border: 1px solid lighten($thirdColor, 30);
+						background-color: lighten($thirdColor, 40);
+					}
+				}
+				p {
+					flex: 1;
+					margin: 0 0.75em;
+				}
+				.left {
+					border-top-left-radius: 500px;
+					border-bottom-left-radius: 500px;
+				}
+				.right {
+					border-top-right-radius: 500px;
+					border-bottom-right-radius: 500px;
+				}
+			}
+
+			a {
+				@include btn-text-unselect;
+				display: inline-block;
+				border: 1px solid lighten(black, 90);
+				padding: 0.5em 2em;
+				white-space: nowrap;
+				font-size: 0.8em;
+				color: $thirdColor;
+				transition: all 0.2s;
+				border-radius: 500px;
+				cursor: pointer;
+				&:hover {
+					@include desktop {
+						background-color: $thirdColor;
+						border: 1px solid $thirdColor;
+						color: white;
+					}
+				}
+				&:active {
+					background-color: rgba($thirdColor, 0.1);
+					border: 1px solid rgba($thirdColor, 0.1);
+					color: white;
+				}
+			}
+			.icon {
+				@include btn-text-unselect;
+				padding: 2px;
+				border-radius: 5px;
+				cursor: pointer;
+				&:hover {
+					@include desktop {
+						color: lighten(black, 20);
+					}
+				}
+				&:active {
+					color: lighten(black, 60);
+				}
+			}
+		}
+		.total {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			padding: 0 2%;
+			@include tab {
+				padding: 0;
+			}
+
+			.totalItem {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				@include tab {
+					width: 250px;
+					padding: 0;
+				}
+			}
+			p {
+				margin: 0.5em 0;
+				text-align: left;
+			}
+
+			span {
+				font-weight: 600;
+				color: $secondaryColor;
+				margin: 0.5em 0;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.empty {
+	margin: auto;
+	p {
+		text-align: center;
+		font-size: 1.2em;
+		font-family: Montserrat;
+	}
+}

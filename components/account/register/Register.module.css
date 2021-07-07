@@ -1,4 +1,5 @@
 /* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 .my-1 {
   margin: 1rem 0;
 }
@@ -213,11 +214,34 @@
           text-decoration-line: underline;
 }
 
+.register .error {
+  background-color: rgba(220, 20, 60, 0.05);
+  padding: 0.4em 1em;
+  margin: 1em auto 0.5em auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .register .error {
+    margin: 1em 0 0.5em 0;
+    text-align: left;
+  }
+}
+
+.register .error p {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: crimson;
+  white-space: nowrap;
+  margin: 0;
+}
+
 .register .forgotPassword {
   color: dodgerblue;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
-  font-size: 0.9em;
+  font-size: 0.8em;
   cursor: pointer;
   text-align: center;
   margin: 0.5em auto 0 auto;

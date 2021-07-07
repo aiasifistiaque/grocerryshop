@@ -1,4 +1,5 @@
 /* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 .my-1 {
   margin: 1rem 0;
 }
@@ -153,7 +154,6 @@
 
 .navbar .navbrand {
   padding: 0 2%;
-  cursor: pointer;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -161,6 +161,7 @@
 }
 
 .navbar .navbrand a {
+  cursor: pointer;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -187,7 +188,6 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: pointer;
   text-transform: uppercase;
 }
 
@@ -198,12 +198,27 @@
 }
 
 .navbar .navRight a {
-  margin: 0 0.5em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 1em 0.5em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 @media (min-width: 640px) {
   .navbar .navRight a {
     margin: 0 1em;
+  }
+}
+
+@media (min-width: 1008px) {
+  .navbar .navRight a:hover {
+    border-bottom: 2px solid white;
   }
 }
 

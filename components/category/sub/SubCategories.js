@@ -19,6 +19,7 @@ const SubCategories = ({ links, data, to }) => {
 					<Link href={`${to}/${item.name}`} key={i}>
 						<div className={styles.card}>
 							<Image
+								alt={item.name}
 								src={item.image}
 								width={150}
 								height={150}

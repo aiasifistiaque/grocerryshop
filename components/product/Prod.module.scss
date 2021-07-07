@@ -83,6 +83,46 @@
 				height: 15px;
 			}
 		}
+		.qty {
+			border-radius: 500px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 150px;
+			a {
+				flex: 1;
+				border-radius: 0;
+				border: 1px solid $thirdColor;
+				background-color: $thirdColor;
+				color: white;
+				padding: 0.5em 1em;
+				text-align: center;
+
+				&:hover {
+					@include desktop {
+						border: 1px solid darken($thirdColor, 10);
+						background-color: darken($thirdColor, 10);
+					}
+				}
+				&:active {
+					border: 1px solid lighten($thirdColor, 30);
+					background-color: lighten($thirdColor, 40);
+				}
+			}
+			p {
+				flex: 1;
+				margin: 0 0.75em;
+				text-align: center;
+			}
+			.left {
+				border-top-left-radius: 500px;
+				border-bottom-left-radius: 500px;
+			}
+			.right {
+				border-top-right-radius: 500px;
+				border-bottom-right-radius: 500px;
+			}
+		}
 		a {
 			@include btn-text-unselect;
 			display: inline-flex;

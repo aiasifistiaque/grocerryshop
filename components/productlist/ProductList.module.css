@@ -1,5 +1,6 @@
 /* Margin */
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 .my-1 {
   margin: 1rem 0;
@@ -254,6 +255,62 @@
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
   }
+}
+
+.plContainer .cardContainer .card .qty {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 500px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plContainer .cardContainer .card .qty a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 0;
+  border: 1px solid crimson;
+  background-color: crimson;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+@media (min-width: 1008px) {
+  .plContainer .cardContainer .card .qty a:hover {
+    border: 1px solid #ad102f;
+    background-color: #ad102f;
+  }
+}
+
+.plContainer .cardContainer .card .qty a:active {
+  border: 1px solid #f594a7;
+  background-color: #fac3ce;
+}
+
+.plContainer .cardContainer .card .qty p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.75em;
+}
+
+.plContainer .cardContainer .card .qty .left {
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+}
+
+.plContainer .cardContainer .card .qty .right {
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
 }
 
 .plContainer .cardContainer .card a {

@@ -3,11 +3,18 @@ import styles from './Prod.module.css';
 import Image from 'next/image';
 import { faStar, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch } from 'react-redux';
+import useInCart from '../../hooks/useInCart';
+import addToCartAction from '../../store/actions/cart/addToCartAction';
+import removeFromCartAction from '../../store/actions/cart/removeFromCartAction';
 
 const Prod = ({ productData }) => {
+	const dispatch = useDispatch();
+	const ifInCart = useInCart(productData._id);
+
 	return (
 		<div className={styles.productPage}>
-			<Image src={productData.image} height={300} width={300} />
+			<Image src={productData.image} alt='product' height={300} width={300} />
 			<div className={styles.details}>
 				<h2>
 					{productData.name} {productData.size}
@@ -32,7 +39,35 @@ const Prod = ({ productData }) => {
 					/>
 					<p>In Stock</p>
 				</div>
-				<a>Add to Cart</a>
+				{ifInCart.loading ? (
+					<a onClick={() => {}}>Loading</a>
+				) : !ifInCart.inCart ? (
+					<a onClick={() => dispatch(addToCartAction(productData, 1))}>
+						Add to Cart
+					</a>
+				) : (
+					<div className={styles.qty}>
+						<a
+							className={styles.left}
+							onClick={() => {
+								if (ifInCart.item.qty > 1) {
+									dispatch(addToCartAction(productData, ifInCart.item.qty - 1));
+								} else {
+									dispatch(removeFromCartAction(productData._id));
+								}
+							}}>
+							-
+						</a>
+						<p>{ifInCart.item.qty}</p>
+						<a
+							className={styles.right}
+							onClick={() =>
+								dispatch(addToCartAction(productData, ifInCart.item.qty + 1))
+							}>
+							+
+						</a>
+					</div>
+				)}
 			</div>
 		</div>
 	);
