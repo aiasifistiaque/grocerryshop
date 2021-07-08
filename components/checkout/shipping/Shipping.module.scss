@@ -1,0 +1,125 @@
+@import '../../../styles/imports';
+
+%gen {
+	padding: 0 0.2em;
+}
+%head-gen {
+	font-family: Montserrat;
+	text-transform: uppercase;
+}
+
+%shipping-page-containers {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 5px;
+	border-radius: 5px;
+	margin: 0;
+	padding: 5%;
+	margin: 2% 0;
+
+	@include tab {
+		margin: 0 2%;
+		padding: 3%;
+	}
+}
+
+.shippingPage {
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+	padding: 2% 0;
+
+	@include tab {
+		flex-direction: row;
+	}
+	@include desktop {
+		padding: 2% 10%;
+	}
+	.formContainer {
+		@extend %shipping-page-containers;
+		@include tab {
+			margin-left: 4%;
+			padding: 3% 5%;
+		}
+
+		h2 {
+			font-family: Montserrat;
+		}
+		.form {
+			display: flex;
+			flex-direction: column;
+			margin: 5% 0;
+		}
+	}
+}
+
+.summary {
+	@extend %shipping-page-containers;
+
+	@include tab {
+		margin-right: 4%;
+		max-width: 400px;
+	}
+
+	span {
+		width: 100%;
+		border: 1px solid rgba(black, 0.2);
+		margin: 0.5em 0;
+	}
+	.summaryHeader {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: space-between;
+		h3 {
+			font-family: Montserrat;
+			@extend %gen;
+		}
+		.totalItems {
+			background-color: teal;
+			color: white;
+			font-family: Montserrat;
+			letter-spacing: 1px;
+			padding: 0.25em 0.5em;
+			border-radius: 4px;
+			font-size: 0.8em;
+			@extend %gen;
+		}
+	}
+	.card {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		//items
+		h4 {
+			@extend %gen;
+			margin: 0.5em 0;
+			font-size: 0.8em;
+		}
+		//item header
+		h6 {
+			@extend %head-gen;
+			font-size: 1em;
+			color: lighten(black, 30);
+			margin-bottom: 0;
+			margin-top: 2em;
+			@extend %gen;
+		}
+		//subtotal
+		h5 {
+			@extend %head-gen;
+			color: lighten(black, 30);
+			margin: 0.25em 0;
+			@extend %gen;
+		}
+		//total
+		h3 {
+			@extend %head-gen;
+			margin: 0.5em 0;
+			@extend %gen;
+		}
+	}
+}

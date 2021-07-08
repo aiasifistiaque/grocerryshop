@@ -1,27 +1,43 @@
 import React from 'react';
 import styles from './CartOne.module.css';
 import LongButton from '../../core/buttons/LongButton';
-import Image from 'next/image';
 import { general } from '../../../constants';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import addToCartAction from '../../../store/actions/cart/addToCartAction';
-import removeFromCartAction from '../../../store/actions/cart/removeFromCartAction';
-import { useDispatch } from 'react-redux';
 import useCart from '../../../hooks/useCart';
+import { useRouter } from 'next/dist/client/router';
+import CartPageItem from './CartPageItem';
+import EmptyCart from './EmptyCart';
 
 const CartOne = ({ items }) => {
 	const { total, count } = useCart();
+	const router = useRouter();
+
+	const toShipping = () => {
+		router.push('/checkout/shipping');
+	};
+
 	return (
 		<div className={styles.cartOneContainer}>
-			<h2>Your Cart</h2>
+			<div className={styles.cartHeader}>
+				<h2>My Cart</h2>
+
+				<LongButton onClick={toShipping}>Checkout</LongButton>
+			</div>
 
 			{count == 0 ? (
 				<EmptyCart />
 			) : (
 				<div className={styles.cardContainer}>
+					<div
+						className={styles.card}
+						style={{ borderBottom: '2px solid whitesmoke' }}>
+						<h2 style={{ flex: 2 }}>Product</h2>
+						<h2 style={{ flex: 1 }}>Quantity</h2>
+						<h2 style={{ flex: 1 }}>Price</h2>
+						<h2>del</h2>
+					</div>
+
 					{items.map((item, i) => (
-						<Item item={item} key={i} />
+						<CartPageItem item={item} key={i} />
 					))}
 					<hr />
 					<div className={styles.total}>
@@ -52,60 +68,6 @@ const Totals = ({ title, children, tk }) => {
 				{tk && general.takaSymbol + ' '}
 				{children}
 			</p>
-		</div>
-	);
-};
-
-const Item = ({ item }) => {
-	const dispatch = useDispatch();
-	return (
-		<div className={styles.card}>
-			<div className={styles.image}>
-				<Image src={item.image} height={100} width={100} objectFit='cover' />
-			</div>
-
-			<h3>{item.name}</h3>
-			<div style={{ flex: 1 }}>
-				<div className={styles.qty}>
-					<a
-						className={styles.left}
-						onClick={() => {
-							if (item.qty > 1) {
-								dispatch(addToCartAction(item, item.qty - 1));
-							}
-						}}>
-						-
-					</a>
-					<p>{item.qty}</p>
-					<a
-						className={styles.right}
-						onClick={() => {
-							dispatch(addToCartAction(item, item.qty + 1));
-						}}>
-						+
-					</a>
-				</div>
-			</div>
-
-			<p>
-				{general.takaSymbol} {item.totalPrice}
-			</p>
-			<FontAwesomeIcon
-				icon={faTrash}
-				height={20}
-				className={styles.icon}
-				onClick={() => dispatch(removeFromCartAction(item._id))}
-			/>
-		</div>
-	);
-};
-
-const EmptyCart = () => {
-	return (
-		<div className={styles.empty}>
-			<p>Cart is empty</p>
-			<br />
-			<LongButton>Continue Shopping</LongButton>
 		</div>
 	);
 };

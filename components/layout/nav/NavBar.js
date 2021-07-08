@@ -30,7 +30,7 @@ const NavBar = ({ barPressed, open, close }) => {
 				<div className={styles.navRight}>
 					<NavRightIcon icon={faSearch} />
 					<NavRightIcon icon={faUser} />
-					<Link href='/cart' passHref>
+					<Link href='/checkout/cart' passHref>
 						<NavRightIcon icon={faShoppingCart} />
 					</Link>
 

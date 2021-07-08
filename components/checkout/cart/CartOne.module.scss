@@ -3,20 +3,29 @@
 
 .cartOneContainer {
 	display: flex;
-	padding: 15vh 4% 10vh 4%;
+	padding: 4%;
 	width: 100%;
 	margin: 0 auto;
 	flex-direction: column;
-	text-align: center;
+	text-align: left;
 	flex: 1;
 
 	@include tab {
 		text-align: left;
 		width: 80%;
 	}
-	h2 {
-		font-family: Montserrat;
+
+	.cartHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1em 0;
+
+		h2 {
+			font-family: Montserrat;
+		}
 	}
+
 	.cardContainer {
 		padding: 1em 0;
 		//border-bottom: 2px solid lighten(black, 80);
@@ -29,19 +38,52 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin: 1em 0;
+			padding: 1em 0;
 			text-align: left;
-			.image {
-				flex: 1;
-				min-width: 25px;
-			}
-			h3 {
-				flex: 1;
-				margin: 0 0.25em;
-				font-family: Montserrat;
+
+			h2 {
 				font-size: 0.7em;
+				color: lighten(black, 60);
 				@include tab {
 					font-size: 1em;
+				}
+			}
+			.image {
+				display: flex;
+				flex: 2;
+				align-items: center;
+
+				.img {
+					min-width: 25px;
+					flex: 1;
+					@include tab {
+						flex: 0;
+						min-width: 100px;
+					}
+				}
+				a {
+					flex: 1;
+					border: none;
+					background-color: none;
+					color: black;
+					padding: 0;
+					margin: 0;
+					white-space: pre-wrap;
+					margin: 0 0.5em;
+					&:hover {
+						background-color: transparent;
+						text-decoration-line: underline;
+						border: none;
+						color: black;
+					}
+
+					@include tab {
+						flex: 0;
+						margin: 0 1em;
+						font-size: 1em;
+					}
+					font-family: Montserrat;
+					font-size: 0.7em;
 				}
 			}
 
@@ -54,10 +96,13 @@
 				}
 			}
 			.qty {
+				flex: 1;
+				margin: 0 0.25em;
 				border-radius: 500px;
 				display: inline-flex;
 				align-items: center;
-				justify-content: center;
+				justify-content: flex-start;
+
 				a {
 					flex: 1;
 					border-radius: 0;

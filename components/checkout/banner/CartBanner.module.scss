@@ -1,0 +1,40 @@
+@import '../../../styles/imports';
+
+.cartBanner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-between;
+	width: 100%;
+	margin: 10vh auto 0 auto;
+	padding: 5% 4%;
+	box-shadow: 0 0 10px rgba(black, 0.1);
+	@include tab {
+		padding: 2% 14%;
+		padding-top: 3%;
+		width: 100%;
+	}
+	.bannerItem {
+		@include flexCenter(column);
+		color: lighten(black, 70);
+		.icon {
+			height: 20px;
+			@include tab {
+				height: 35px;
+			}
+		}
+		.select {
+			color: $secondaryColor;
+		}
+		h3 {
+			font-family: Montserrat;
+			font-size: 0.6em;
+			margin-top: 1em;
+			color: lighten(black, 50);
+
+			@include tab {
+				font-size: 0.8em;
+			}
+		}
+	}
+}
