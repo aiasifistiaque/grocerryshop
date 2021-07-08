@@ -6,13 +6,19 @@ import useCart from '../../../hooks/useCart';
 import { useRouter } from 'next/dist/client/router';
 import CartPageItem from './CartPageItem';
 import EmptyCart from './EmptyCart';
+import { useSelector } from 'react-redux';
 
 const CartOne = ({ items }) => {
 	const { total, count } = useCart();
 	const router = useRouter();
+	const { loggedIn } = useSelector(state => state.auth);
 
 	const toShipping = () => {
-		router.push('/checkout/shipping');
+		if (loggedIn) {
+			router.push('/checkout/shipping');
+		} else {
+			router.push('/login?from=cart');
+		}
 	};
 
 	return (
@@ -52,7 +58,7 @@ const CartOne = ({ items }) => {
 							{total}
 						</Totals>
 						<br />
-						<LongButton>Proceed to Checkout</LongButton>
+						<LongButton onClick={toShipping}>Proceed to Checkout</LongButton>
 					</div>
 				</div>
 			)}

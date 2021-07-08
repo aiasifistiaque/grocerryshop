@@ -121,7 +121,7 @@
   padding: 4rem;
 }
 
-.buttonOne, .longButton {
+.buttonOne {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -144,27 +144,119 @@
   background-color: crimson;
   color: white;
   letter-spacing: 1px;
-}
-
-@media (min-width: 1008px) {
-  .buttonOne, .longButton {
-    padding: 1em;
-  }
-  .buttonOne:hover, .longButton:hover {
-    background-color: #c51236;
-  }
-}
-
-.buttonOne:active, .longButton:active {
-  background-color: #fac3ce;
-}
-
-.buttonOne {
   width: 150px;
   height: 38px;
 }
 
+@media (min-width: 1008px) {
+  .buttonOne {
+    padding: 1em;
+  }
+  .buttonOne:hover {
+    background-color: #c51236;
+  }
+}
+
+.buttonOne:active {
+  background-color: #fac3ce;
+}
+
 .longButton {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 500px;
+  background-color: crimson;
+  color: white;
+  letter-spacing: 1px;
   padding: 1em 2em;
+}
+
+@media (min-width: 1008px) {
+  .longButton {
+    padding: 1em;
+  }
+  .longButton:hover {
+    background-color: #c51236;
+  }
+}
+
+.longButton:active {
+  background-color: #fac3ce;
+}
+
+.buttonPrimary {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 500px;
+  background-color: darkslateblue;
+  color: white;
+  letter-spacing: 1px;
+  padding: 1em 2em;
+  min-width: 150px;
+}
+
+@media (min-width: 1008px) {
+  .buttonPrimary {
+    padding: 1em;
+  }
+  .buttonPrimary:hover {
+    background-color: #3f3579;
+  }
+}
+
+.buttonPrimary:active {
+  background-color: #bbb5df;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.textButton {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .textButton:hover {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
 }
 /*# sourceMappingURL=Buttons.module.css.map */

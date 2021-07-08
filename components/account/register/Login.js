@@ -6,9 +6,13 @@ import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import loginAction from '../../../store/actions/user/loginAction';
 import validateEmail from '../../../functions/validateEmail';
+import { useRouter } from 'next/router';
 
 const Login = () => {
 	const dispatch = useDispatch();
+	const router = useRouter();
+	const { from } = router.query;
+
 	const { loading, error } = useSelector(state => state.login);
 
 	const [email, setEmail] = useState('');
@@ -30,7 +34,8 @@ const Login = () => {
 		} else if (password.length < 1) {
 			setValidationErrorText('Password is Required');
 		}
-		!validationError && dispatch(loginAction(email, password, '/'));
+		const redirect = from || '';
+		!validationError && dispatch(loginAction(email, password, `/${redirect}`));
 	};
 	return (
 		<div className={styles.register}>

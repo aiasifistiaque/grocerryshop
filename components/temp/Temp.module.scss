@@ -1,0 +1,12 @@
+@import '../../styles/imports';
+
+.tempContainer {
+	@include flexCenter(column);
+
+	flex: 1;
+	padding: 15vh 5%;
+	h2 {
+		text-align: center;
+		font-family: Montserrat;
+	}
+}

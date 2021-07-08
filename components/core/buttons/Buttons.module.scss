@@ -1,7 +1,7 @@
 @import '../../../styles/imports';
 @import '../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
 
-%core-buttons {
+@mixin core-buttons($color: crimson) {
 	@include btn-text-unselect;
 	display: inline-flex;
 	white-space: nowrap;
@@ -12,27 +12,48 @@
 	font-size: 0.8em;
 	font-weight: 600;
 	border-radius: 500px;
-	background-color: $thirdColor;
+	background-color: $color;
 	color: white;
 	letter-spacing: 1px;
 	@include desktop {
 		padding: 1em;
 		&:hover {
-			background-color: darken($thirdColor, 5);
+			background-color: darken($color, 5);
 		}
 	}
 	&:active {
-		background-color: lighten($thirdColor, 40);
+		background-color: lighten($color, 40);
 	}
 }
 
 .buttonOne {
-	@extend %core-buttons;
+	@include core-buttons;
 	width: 150px;
 	height: 38px;
 }
 
 .longButton {
-	@extend %core-buttons;
+	@include core-buttons;
 	padding: 1em 2em;
+}
+
+.buttonPrimary {
+	@include core-buttons($secondaryColor);
+	padding: 1em 2em;
+	min-width: 150px;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
+.textButton {
+	@include btn-text-unselect;
+	color: dodgerblue;
+	cursor: pointer;
+	@include desktop {
+		&:hover {
+			text-decoration-line: underline;
+		}
+	}
 }

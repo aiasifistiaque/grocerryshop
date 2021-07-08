@@ -121,41 +121,6 @@
   padding: 4rem;
 }
 
-.summary .summaryHeader h3, .summary .summaryHeader .totalItems, .summary .card h4, .summary .card h6, .summary .card h5, .summary .card h3 {
-  padding: 0 0.2em;
-}
-
-.summary .card h6, .summary .card h5, .summary .card h3 {
-  font-family: Montserrat;
-  text-transform: uppercase;
-}
-
-.shippingPage .formContainer, .summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: white;
-  border-radius: 5px;
-  border-radius: 5px;
-  margin: 0;
-  padding: 5%;
-  margin: 2% 0;
-}
-
-@media (min-width: 640px) {
-  .shippingPage .formContainer, .summary {
-    margin: 0 2%;
-    padding: 3%;
-  }
-}
-
 .shippingPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,6 +148,43 @@
   }
 }
 
+.shippingPage .formContainer, .summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5%;
+  margin: 2% 0;
+}
+
+@media (min-width: 640px) {
+  .shippingPage .formContainer, .summary {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0 2%;
+    padding: 3%;
+  }
+}
+
+.summary .summaryHeader h3, .summary .summaryHeader .totalItems, .summary .card h4, .summary .card h6, .summary .card h5, .summary .card h3 {
+  padding: 0 0.2em;
+}
+
+.summary .card h6, .summary .card h5, .summary .card h3 {
+  font-family: Montserrat;
+  text-transform: uppercase;
+}
+
 @media (min-width: 640px) {
   .shippingPage .formContainer {
     margin-left: 4%;
@@ -205,6 +207,59 @@
   margin: 5% 0;
 }
 
+.shippingPage .formContainer .form .error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(220, 20, 60, 0.05);
+  padding: 0.5em 2em;
+  margin: -1em 0 0.5em 0;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .shippingPage .formContainer .form .error {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: -1em auto 0.5em 0;
+    text-align: left;
+  }
+}
+
+.shippingPage .formContainer .form .error p {
+  font-size: 0.7em;
+  font-weight: 6500;
+  color: crimson;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.shippingPage .formContainer .form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .shippingPage .formContainer .form .submit {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 @media (min-width: 640px) {
   .summary {
     margin-right: 4%;
@@ -222,9 +277,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

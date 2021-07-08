@@ -12,3 +12,35 @@
 		box-shadow: 0 0 10px rgba(black, 0.1);
 	}
 }
+
+%checkout-page-main {
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+	padding: 2% 0;
+
+	@include tab {
+		flex-direction: row;
+	}
+	@include desktop {
+		padding: 2% 10%;
+	}
+}
+
+%checkout-page-containers {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 5px;
+	border-radius: 5px;
+	margin: 0;
+	padding: 5%;
+	margin: 2% 0;
+
+	@include tab {
+		align-self: flex-start;
+		margin: 0 2%;
+		padding: 3%;
+	}
+}

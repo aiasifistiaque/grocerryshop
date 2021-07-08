@@ -10,7 +10,7 @@ const PageLogin = () => {
 	const router = useRouter();
 	useEffect(() => {
 		if (loggedIn) {
-			router.replace('/');
+			//router.replace('/');
 		}
 	}, [loggedIn]);
 	if (loggedIn) return <PageLoading />;

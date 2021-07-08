@@ -1,6 +1,9 @@
 //
 export const cartName = 'marncart';
 export const tokenName = 'marntoken';
+export const shippingName = 'marnshipping';
+
+export const ISSERVER = typeof window === 'undefined';
 
 /**auth */
 export const logIn = 'LOG_IN';
@@ -51,3 +54,16 @@ export const getProductsBySubFail = 'GET_PRODUCTS_BY_SUB_FAIL';
 export const getProductsByTagRequest = 'GET_PRODUCTS_BY_TAG_REQUEST';
 export const getProductsByTagSuccess = 'GET_PRODUCTS_BY_TAG_SUCCESS';
 export const getProductsByTagFail = 'GET_PRODUCTS_BY_TAG_FAIL';
+
+/**create new order
+ *
+ */
+export const createOrderRequest = 'CREATE_ORDER_REQUEST';
+export const createOrderSuccess = 'CREATE_ORDER_SUCCESS';
+export const createOrderFail = 'CREATE_ORDER_FAIL';
+
+/**shipping address
+ *
+ */
+export const getShippingAddressRequest = 'GET_SHIPPING_ADDRESS_REQUEST';
+export const getShippingAddressSuccess = 'GET_SHIPPING_ADDRESS_Success';

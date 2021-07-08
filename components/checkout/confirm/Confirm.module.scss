@@ -1,0 +1,66 @@
+@import '../../../styles/imports';
+
+.confirmPage {
+	@extend %checkout-page-main;
+	.confirmContainer {
+		@extend %checkout-page-containers;
+		h2 {
+			font-family: Montserrat;
+		}
+		h3 {
+			font-family: Montserrat;
+		}
+		.cardContainer {
+			margin: 1em 0;
+			font-family: Montserrat;
+			hr {
+				border-top: none;
+				border-bottom: 1px solid lighten(black, 85);
+				margin: 1em 0;
+			}
+			.infoCard {
+				display: flex;
+				justify-content: space-between;
+				margin: 0.5em 0;
+
+				h4 {
+					flex: 1;
+
+					font-size: 0.9em;
+				}
+				p {
+					flex: 1;
+					font-size: 0.9em;
+					text-align: right;
+				}
+			}
+
+			.card {
+				display: flex;
+				justify-content: space-between;
+				margin: 0.5em 0;
+
+				h4 {
+					flex: 1;
+					font-size: 0.9em;
+				}
+				p {
+					flex: 2;
+					font-size: 0.9em;
+					@include tab {
+						flex: 3;
+					}
+				}
+			}
+		}
+
+		.submit {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			@include tab {
+				align-items: flex-start;
+			}
+		}
+	}
+}

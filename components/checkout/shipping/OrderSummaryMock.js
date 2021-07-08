@@ -1,9 +1,11 @@
 import React from 'react';
 import useCart from '../../../hooks/useCart';
 import styles from './Shipping.module.scss';
+import { useSelector } from 'react-redux';
 
-const OrderSummaryMock = ({ items }) => {
+const OrderSummaryMock = () => {
 	const { total, count } = useCart();
+	const { cartItems } = useSelector(state => state.cart);
 
 	return (
 		<div className={styles.summary}>
@@ -16,7 +18,7 @@ const OrderSummaryMock = ({ items }) => {
 				<h6>Total</h6>
 			</Card>
 			<span />
-			{items.map(item => (
+			{cartItems.map(item => (
 				<Card key={item._id}>
 					<h4>
 						{item.name} x {item.qty}

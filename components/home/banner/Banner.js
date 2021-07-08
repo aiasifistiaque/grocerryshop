@@ -6,7 +6,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Banner.module.css';
-import { icon } from '@fortawesome/fontawesome-svg-core';
 
 const banner = [
 	{

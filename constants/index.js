@@ -82,4 +82,6 @@ export const api = {
 
 export const general = {
 	takaSymbol: '৳',
+	vat: 0,
+	shipping: 0,
 };
