@@ -8,7 +8,7 @@ import getOrderAction from '../../store/actions/orders/getOrderAction';
 const OrderPage = () => {
 	const dispatch = useDispatch();
 	const router = useRouter();
-	const { id } = router.query;
+	const { id, status } = router.query;
 
 	useEffect(() => {
 		console.log(id);
@@ -21,7 +21,7 @@ const OrderPage = () => {
 
 	return (
 		<HomePage inv>
-			<OrderComponent />
+			<OrderComponent status={status} />
 		</HomePage>
 	);
 };

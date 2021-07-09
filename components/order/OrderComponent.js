@@ -9,14 +9,11 @@ import { general } from '../../constants';
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 
-const OrderComponent = () => {
+const OrderComponent = ({ status }) => {
 	const { order, loading, error } = useSelector(state => state.order);
 	if (loading) return <Loading />;
 	if (error) return null;
 	if (isEmpty(order)) return null;
-
-	const router = useRouter();
-	const { status } = router.query;
 
 	return (
 		<div className={styles.ocContainer}>
@@ -55,7 +52,7 @@ const OrderItems = ({ items }) => {
 	return (
 		<>
 			{items.map(item => (
-				<div className={styles.itemCard}>
+				<div className={styles.itemCard} key={item._id}>
 					<div className={styles.imageContainer}>
 						<Image
 							src={item.image}
