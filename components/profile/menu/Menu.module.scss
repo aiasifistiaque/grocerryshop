@@ -1,0 +1,73 @@
+@import '../../../styles/imports';
+
+/** 
+*This is the menu
+*section of the sidebar
+*/
+.menuSectionContainer {
+	@extend %checkout-page-containers;
+	padding: 1% 0;
+	flex: 0;
+	$childPadding: 5%;
+	$childPaddingTab: 5%;
+
+	@include tab {
+		flex: 1;
+		max-width: 250px;
+	}
+	@include desktop {
+		flex: 1;
+		max-width: 280px;
+	}
+	.overview {
+		display: flex;
+		flex-direction: column;
+		padding: 0 $childPadding;
+		margin-top: 1em;
+
+		@include tab {
+			padding: 0 $childPaddingTab;
+		}
+
+		h3 {
+			font-family: Montserrat;
+			margin: 1em auto;
+		}
+	}
+	.menu {
+		.header {
+			padding: 0.5em $childPadding;
+			color: black;
+			font-family: Montserrat;
+			border-bottom: 2px solid whitesmoke;
+
+			@include tab {
+				padding: 0.5em 10%;
+			}
+		}
+		.itemContainer {
+			margin: 0;
+			margin-top: 1.5%;
+
+			.item {
+				padding: 1em $childPadding;
+				background-color: white;
+				transition: 0.2s;
+				@include tab {
+					padding: 1em 10%;
+				}
+				cursor: pointer;
+				p {
+					font-size: 0.8em;
+					font-family: Montserrat;
+					color: lighten(black, 50);
+					text-transform: uppercase;
+				}
+
+				&:hover {
+					background-color: whitesmoke;
+				}
+			}
+		}
+	}
+}

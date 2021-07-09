@@ -121,7 +121,7 @@
   padding: 4rem;
 }
 
-.confirmPage {
+.ppContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +137,7 @@
 }
 
 @media (min-width: 640px) {
-  .confirmPage {
+  .ppContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -146,12 +146,12 @@
 }
 
 @media (min-width: 1008px) {
-  .confirmPage {
+  .ppContainer {
     padding: 2% 10%;
   }
 }
 
-.confirmPage .confirmContainer {
+.ppContainer .orderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +171,7 @@
 }
 
 @media (min-width: 640px) {
-  .confirmPage .confirmContainer {
+  .ppContainer .orderContainer {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 0 2%;
@@ -179,100 +179,105 @@
   }
 }
 
-.confirmPage .confirmContainer h2 {
+.ppContainer {
+  padding-top: 12vh;
+}
+
+@media (min-width: 640px) {
+  .ppContainer {
+    padding-top: 15vh;
+  }
+}
+
+.ppContainer .orderContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  flex: 1;
+}
+
+.ppContainer .orderContainer hr {
+  border: 1px solid whitesmoke;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+.ppContainer .orderContainer h3 {
+  margin: 0 0.25em;
+  margin-bottom: 1em;
   font-family: Montserrat;
 }
 
-.confirmPage .confirmContainer h3 {
+.ppContainer .orderContainer .noOrders {
   font-family: Montserrat;
+  text-align: center;
+  margin: 2.5em auto 1em auto;
 }
 
-.confirmPage .confirmContainer .cardContainer {
-  margin: 1em 0;
-  font-family: Montserrat;
-}
-
-.confirmPage .confirmContainer .cardContainer hr {
-  border-top: none;
-  border-bottom: 1px solid #d9d9d9;
-  margin: 1em 0;
-}
-
-.confirmPage .confirmContainer .cardContainer .infoCard {
+.ppContainer .orderContainer .orderCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0.5em 0;
-}
-
-.confirmPage .confirmContainer .cardContainer .infoCard h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 0.9em;
 }
 
-.confirmPage .confirmContainer .cardContainer .infoCard p {
+.ppContainer .orderContainer .orderCard h4, .ppContainer .orderContainer .orderCard p, .ppContainer .orderContainer .orderCard a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 0.9em;
-  text-align: right;
-}
-
-.confirmPage .confirmContainer .cardContainer .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0.5em 0;
-}
-
-.confirmPage .confirmContainer .cardContainer .card h4 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 0.9em;
-}
-
-.confirmPage .confirmContainer .cardContainer .card p {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  font-size: 0.9em;
+  margin: 1em 0.5em;
+  font-size: 0.7em;
 }
 
 @media (min-width: 640px) {
-  .confirmPage .confirmContainer .cardContainer .card p {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+  .ppContainer .orderContainer .orderCard h4, .ppContainer .orderContainer .orderCard p, .ppContainer .orderContainer .orderCard a {
+    font-size: 0.8em;
   }
 }
 
-.confirmPage .confirmContainer .submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-@media (min-width: 640px) {
-  .confirmPage .confirmContainer .submit {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+@media (min-width: 1008px) {
+  .ppContainer .orderContainer .orderCard h4, .ppContainer .orderContainer .orderCard p, .ppContainer .orderContainer .orderCard a {
+    font-size: 0.85em;
+  }
+  .ppContainer .orderContainer .orderCard h4 .date, .ppContainer .orderContainer .orderCard p .date, .ppContainer .orderContainer .orderCard a .date {
+    font-size: 0.7em;
   }
 }
-/*# sourceMappingURL=Confirm.module.css.map */
+
+.ppContainer .orderContainer .orderCard h4 {
+  color: #999999;
+  margin: 0.25em 0.5em;
+}
+
+.ppContainer .orderContainer .orderCard p {
+  color: #666666;
+}
+
+.ppContainer .orderContainer .orderCard .details {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+}
+
+.ppContainer .orderContainer .orderCard a {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .ppContainer .orderContainer .orderCard a:hover {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+}
+/*# sourceMappingURL=PastOrders.module.css.map */

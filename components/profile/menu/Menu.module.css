@@ -121,37 +121,7 @@
   padding: 4rem;
 }
 
-.paymentPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: whitesmoke;
-  padding: 2% 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-@media (min-width: 640px) {
-  .paymentPage {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 1008px) {
-  .paymentPage {
-    padding: 2% 10%;
-  }
-}
-
-.paymentPage .paymentOption {
+.menuSectionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +141,7 @@
 }
 
 @media (min-width: 640px) {
-  .paymentPage .paymentOption {
+  .menuSectionContainer {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 0 2%;
@@ -179,20 +149,36 @@
   }
 }
 
-.paymentPage .paymentOption h2 {
-  font-family: Montserrat;
+/** 
+*This is the menu
+*section of the sidebar
+*/
+.menuSectionContainer {
+  padding: 1% 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
-.paymentPage .paymentOption P {
-  line-height: 1.5em;
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  border-radius: 5px;
-  background-color: rgba(0, 128, 128, 0.1);
-  font-family: Montserrat;
+@media (min-width: 640px) {
+  .menuSectionContainer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 250px;
+  }
 }
 
-.paymentPage .paymentOption .submit {
+@media (min-width: 1008px) {
+  .menuSectionContainer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 280px;
+  }
+}
+
+.menuSectionContainer .overview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,16 +186,61 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  padding: 0 5%;
+  margin-top: 1em;
 }
 
 @media (min-width: 640px) {
-  .paymentPage .paymentOption .submit {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .menuSectionContainer .overview {
+    padding: 0 5%;
   }
 }
-/*# sourceMappingURL=Payment.module.css.map */
+
+.menuSectionContainer .overview h3 {
+  font-family: Montserrat;
+  margin: 1em auto;
+}
+
+.menuSectionContainer .menu .header {
+  padding: 0.5em 5%;
+  color: black;
+  font-family: Montserrat;
+  border-bottom: 2px solid whitesmoke;
+}
+
+@media (min-width: 640px) {
+  .menuSectionContainer .menu .header {
+    padding: 0.5em 10%;
+  }
+}
+
+.menuSectionContainer .menu .itemContainer {
+  margin: 0;
+  margin-top: 1.5%;
+}
+
+.menuSectionContainer .menu .itemContainer .item {
+  padding: 1em 5%;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .menuSectionContainer .menu .itemContainer .item {
+    padding: 1em 10%;
+  }
+}
+
+.menuSectionContainer .menu .itemContainer .item p {
+  font-size: 0.8em;
+  font-family: Montserrat;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.menuSectionContainer .menu .itemContainer .item:hover {
+  background-color: whitesmoke;
+}
+/*# sourceMappingURL=Menu.module.css.map */

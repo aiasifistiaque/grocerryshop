@@ -62,6 +62,13 @@ export const createOrderRequest = 'CREATE_ORDER_REQUEST';
 export const createOrderSuccess = 'CREATE_ORDER_SUCCESS';
 export const createOrderFail = 'CREATE_ORDER_FAIL';
 
+/**
+ * Get Orders of user
+ */
+export const getOrderRequest = 'GET_ORDER_REQUEST';
+export const getOrderSuccess = 'GET_ORDER_SUCCESS';
+export const getOrderFail = 'GET_ORDER_FAIL';
+
 /**shipping address
  *
  */

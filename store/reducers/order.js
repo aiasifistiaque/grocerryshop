@@ -2,9 +2,12 @@ import {
 	createOrderRequest,
 	createOrderFail,
 	createOrderSuccess,
+	getOrderRequest,
+	getOrderSuccess,
+	getOrderFail,
 } from '../storeConstants';
 
-//
+//get single order
 export const orderReducer = (
 	state = { order: {}, loading: false, success: false },
 	action
@@ -20,6 +23,32 @@ export const orderReducer = (
 			};
 		case createOrderFail:
 			return { loading: false, error: action.payload, success: false };
+
+		default:
+			return state;
+	}
+};
+
+//get multiple order
+export const getOrdersReducer = (
+	state = { orders: [], loading: false, success: false, count: 0 },
+	action
+) => {
+	switch (action.type) {
+		case getOrderRequest:
+			return { loading: true, orders: [], success: false, count: 0 };
+		case getOrderSuccess:
+			return {
+				orders: action.payload.orders,
+				count: action.payload.count,
+				loading: false,
+				success: true,
+			};
+		case getOrderFail:
+			return {
+				loading: false,
+				error: action.payload,
+			};
 
 		default:
 			return state;

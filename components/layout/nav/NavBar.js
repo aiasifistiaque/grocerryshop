@@ -29,7 +29,9 @@ const NavBar = ({ barPressed, open, close }) => {
 
 				<div className={styles.navRight}>
 					<NavRightIcon icon={faSearch} />
-					<NavRightIcon icon={faUser} />
+					<Link href='/profile/overview' passHref>
+						<NavRightIcon icon={faUser} />
+					</Link>
 					<Link href='/checkout/cart' passHref>
 						<NavRightIcon icon={faShoppingCart} />
 					</Link>
