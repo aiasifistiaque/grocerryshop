@@ -47,7 +47,7 @@ const MyOrders = ({ orders }) => {
 	return (
 		<>
 			{orders.map(order => (
-				<div className={styles.orderCard}>
+				<div className={styles.orderCard} key={order._id}>
 					<p className={styles.date}>{toTime(order.createdAt)}</p>
 					<p>
 						{general.takaSymbol} {order.totalPrice}
