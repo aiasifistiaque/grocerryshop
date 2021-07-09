@@ -17,7 +17,7 @@ const CartOne = ({ items }) => {
 		if (loggedIn) {
 			router.push('/checkout/shipping');
 		} else {
-			router.push('/login?from=cart');
+			router.push('/login?from=checkout/cart');
 		}
 	};
 

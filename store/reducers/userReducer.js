@@ -8,6 +8,9 @@ import {
 	signupSuccess,
 	signupFail,
 	logOut,
+	getProfileRequest,
+	getProfileSuccess,
+	getProfileFail,
 } from '../storeConstants';
 
 export const loginReducer = (state = {}, action) => {
@@ -36,5 +39,19 @@ export const signupReducer = (state = {}, action) => {
 
 		default:
 			return { loading: false };
+	}
+};
+
+export const userReducer = (state = { user: {}, loading: false }, action) => {
+	switch (action.type) {
+		case getProfileRequest:
+			return { loading: true };
+		case getProfileSuccess:
+			return { user: action.payload, loading: false };
+		case getProfileFail:
+			return { loading: false, error: action.payload };
+
+		default:
+			return state;
 	}
 };

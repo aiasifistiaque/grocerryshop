@@ -8,11 +8,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import logoutAction from '../../../store/actions/user/logoutAction';
+import useAuth from '../../../hooks/useAuth';
 
 const NavBar = ({ barPressed, open, close }) => {
-	const { loggedIn } = useSelector(state => state.auth);
+	const { loading, isLoggedIn } = useAuth();
 	const dispatch = useDispatch();
 
 	return (
@@ -29,14 +30,20 @@ const NavBar = ({ barPressed, open, close }) => {
 
 				<div className={styles.navRight}>
 					<NavRightIcon icon={faSearch} />
-					<Link href='/profile/overview' passHref>
+					<Link
+						href={
+							!loading && isLoggedIn
+								? '/profile/overview'
+								: '/login?from=profile/overview'
+						}
+						passHref>
 						<NavRightIcon icon={faUser} />
 					</Link>
 					<Link href='/checkout/cart' passHref>
 						<NavRightIcon icon={faShoppingCart} />
 					</Link>
 
-					{loggedIn ? (
+					{loading ? null : isLoggedIn ? (
 						<div onClick={() => dispatch(logoutAction())}>
 							<a style={{ fontSize: '.8em', textTransform: 'lowercase' }}>
 								logout

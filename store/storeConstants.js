@@ -24,6 +24,11 @@ export const loginRequest = 'LOGIN_REQUEST';
 export const loginSuccess = 'LOGIN_SUCCESS';
 export const loginFail = 'LOGIN_FAIL';
 
+/**profile */
+export const getProfileRequest = 'GET_PROFILE_REQUEST';
+export const getProfileSuccess = 'GET_PROFILE_SUCCESS';
+export const getProfileFail = 'GET_PROFILE_FAIL';
+
 /**product list*/
 export const getProductListRequest = 'GET_PRODUCT_LIST_REQUEST';
 export const getProductListSuccess = 'GET_PRODUCT_LIST_SUCCESS';
