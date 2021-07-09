@@ -216,7 +216,7 @@
 
 .menuSectionContainer .menu .itemContainer {
   margin: 0;
-  margin-top: 1.5%;
+  margin-top: 0;
 }
 
 .menuSectionContainer .menu .itemContainer .item {
@@ -242,5 +242,27 @@
 
 .menuSectionContainer .menu .itemContainer .item:hover {
   background-color: whitesmoke;
+}
+
+.menuSectionContainer .menu .itemContainer .selectedItem {
+  padding: 1em 5%;
+  background-color: whitesmoke;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-left: 5px solid darkslateblue;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .menuSectionContainer .menu .itemContainer .selectedItem {
+    padding: 1em 10%;
+  }
+}
+
+.menuSectionContainer .menu .itemContainer .selectedItem p {
+  font-size: 0.8em;
+  font-family: Montserrat;
+  color: gray;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=Menu.module.css.map */

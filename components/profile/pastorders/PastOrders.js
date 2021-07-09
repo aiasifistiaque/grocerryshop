@@ -7,7 +7,7 @@ import { general } from '../../../constants';
 import toTime from '../../../functions/toTime';
 import Link from 'next/link';
 
-const PastOrders = () => {
+const PastOrders = ({ id }) => {
 	const dispatch = useDispatch();
 	const { orders, loading, success, count, error } = useSelector(
 		state => state.orderList
@@ -17,7 +17,7 @@ const PastOrders = () => {
 	}, []);
 	return (
 		<div className={styles.ppContainer}>
-			<Menu />
+			<Menu id={id} />
 
 			<div className={styles.orderContainer}>
 				<h3>My Orders</h3>

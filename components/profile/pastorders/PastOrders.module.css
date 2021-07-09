@@ -280,4 +280,75 @@
             text-decoration-line: underline;
   }
 }
+
+.singleCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Montserrat;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+.singleCard h4, .singleCard p {
+  font-size: 0.8em;
+}
+
+@media (min-width: 640px) {
+  .singleCard h4, .singleCard p {
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 1008px) {
+  .singleCard h4, .singleCard p {
+    font-size: 0.9em;
+  }
+}
+
+.singleCard h4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 0.5em;
+}
+
+.singleCard p {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin: 0 1em 0 0;
+}
+
+@media (min-width: 640px) {
+  .singleCard p {
+    margin: 0 1em;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+}
+
+.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .submit {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 /*# sourceMappingURL=PastOrders.module.css.map */

@@ -47,7 +47,7 @@
 		}
 		.itemContainer {
 			margin: 0;
-			margin-top: 1.5%;
+			margin-top: 0;
 
 			.item {
 				padding: 1em $childPadding;
@@ -66,6 +66,22 @@
 
 				&:hover {
 					background-color: whitesmoke;
+				}
+			}
+			.selectedItem {
+				padding: 1em $childPadding;
+				background-color: whitesmoke;
+				transition: 0.2s;
+				border-left: 5px solid $secondaryColor;
+				@include tab {
+					padding: 1em 10%;
+				}
+				cursor: pointer;
+				p {
+					font-size: 0.8em;
+					font-family: Montserrat;
+					color: lighten(black, 50);
+					text-transform: uppercase;
 				}
 			}
 		}
