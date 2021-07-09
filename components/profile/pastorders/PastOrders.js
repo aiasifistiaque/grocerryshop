@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import userOrderAction from '../../../store/actions/orders/userOrderAction';
 import { general } from '../../../constants';
 import toTime from '../../../functions/toTime';
+import Link from 'next/link';
 
 const PastOrders = () => {
 	const dispatch = useDispatch();
@@ -20,12 +21,7 @@ const PastOrders = () => {
 
 			<div className={styles.orderContainer}>
 				<h3>My Orders</h3>
-				<div className={styles.orderCard}>
-					<h4>Date</h4>
-					<h4>Amount</h4>
-					<h4>Status</h4>
-					<h4 className={styles.details}>Details</h4>
-				</div>
+				<Headers />
 				<hr />
 				{loading ? (
 					<Loading />
@@ -36,9 +32,18 @@ const PastOrders = () => {
 				) : (
 					<MyOrders orders={orders} />
 				)}
-
-				{/* <MyOrders orders={orders} /> */}
 			</div>
+		</div>
+	);
+};
+
+const Headers = () => {
+	return (
+		<div className={styles.orderCard}>
+			<h4>Date</h4>
+			<h4>Amount</h4>
+			<h4>Status</h4>
+			<h4 className={styles.details}>Details</h4>
 		</div>
 	);
 };
@@ -53,7 +58,9 @@ const MyOrders = ({ orders }) => {
 						{general.takaSymbol} {order.totalPrice}
 					</p>
 					<p>{order.status}</p>
-					<a className={styles.details}>Details</a>
+					<Link href={`/order/${order._id}`}>
+						<a className={styles.details}>Details</a>
+					</Link>
 				</div>
 			))}
 		</>

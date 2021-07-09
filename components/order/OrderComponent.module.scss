@@ -1,0 +1,169 @@
+@import '../../styles/imports';
+
+%container-order-partials {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: white;
+
+	margin: 0;
+	padding: 5%;
+	margin: 1% 0;
+
+	h2 {
+		font-family: Montserrat;
+		margin-bottom: 1em;
+	}
+
+	@include desktop {
+		padding: 3%;
+		border-radius: 5px;
+	}
+}
+
+.ocContainer {
+	@extend %checkout-page-main;
+	padding-top: 10vh;
+	flex-direction: column;
+
+	@include desktop {
+		padding-top: 12vh;
+	}
+	.orderPlaced {
+		@extend %container-order-partials;
+		background-color: $secondaryColor;
+		margin-top: 0;
+		h2 {
+			margin: auto;
+			color: white;
+			padding: 0;
+			font-size: 1em;
+			@include tab {
+				font-size: 1.5em;
+			}
+		}
+	}
+	.orderContainer {
+		@extend %container-order-partials;
+
+		.cardContainer {
+			display: flex;
+			flex-direction: column;
+
+			@include tab {
+				flex-direction: row;
+			}
+		}
+	}
+	.itemCardContainer {
+		@extend %container-order-partials;
+		hr {
+			border: 1px solid lighten(black, 90);
+			width: 100%;
+			margin-bottom: 0.5em;
+
+			@include tab {
+				margin-bottom: 1em;
+			}
+		}
+		.itemCard {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0.5em 0;
+			h5 {
+				flex: 1;
+				color: lighten(black, 65);
+				font-size: 0.75em;
+				font-family: Montserrat;
+				@include tab {
+					font-size: 0.9em;
+				}
+			}
+			@include tab {
+				margin: 1em 0;
+			}
+
+			.imageContainer {
+				flex: 2;
+				display: flex;
+				align-items: center;
+				.image {
+					flex: 1;
+					object-fit: cover;
+				}
+				a {
+					flex: 1;
+					h4 {
+						font-family: Montserrat;
+						margin: 0 1em;
+						font-size: 0.8em;
+						@include tab {
+							margin: 0 4em;
+							font-size: 0.9em;
+						}
+					}
+					&:hover {
+						@include desktop {
+							text-decoration-line: underline;
+						}
+					}
+				}
+			}
+			p {
+				flex: 1;
+				font-size: 0.8em;
+				@include tab {
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+}
+
+.error {
+	font-family: Montserrat;
+	text-align: center;
+	margin: 2.5em auto 1em auto;
+}
+
+.doubleCard {
+	display: flex;
+	flex-direction: column;
+
+	@include tab {
+		flex: 1;
+		margin-right: 1em;
+	}
+}
+
+.singleCard {
+	display: flex;
+	font-family: Montserrat;
+	justify-content: space-between;
+	margin: 0.5em 0;
+
+	%cardfrag {
+		font-size: 0.8em;
+		@include tab {
+			font-size: 0.85em;
+		}
+		@include desktop {
+			font-size: 0.9em;
+		}
+	}
+
+	h4 {
+		flex: 1;
+		@extend %cardfrag;
+	}
+	p {
+		@extend %cardfrag;
+		flex: 2;
+		margin: 0 1em 0 0;
+		@include tab {
+			margin: 0 1em;
+			flex: 3;
+		}
+	}
+}

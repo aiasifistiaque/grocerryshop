@@ -11,7 +11,7 @@ import createOrderAction from '../../../store/actions/orders/createOrderAction';
 
 const Confirm = () => {
 	const { address } = useSelector(state => state.address);
-	const { success, loading } = useSelector(state => state.order);
+	const { success, loading, order } = useSelector(state => state.order);
 	const { total, count } = useCart();
 	const router = useRouter();
 	const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Confirm = () => {
 	};
 	useEffect(() => {
 		if (success) {
-			router.replace('/orderplaced');
+			router.replace(`/order/${order._id}?status=neworder`);
 		}
 	}, [success]);
 	return (

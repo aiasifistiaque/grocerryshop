@@ -163,8 +163,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 0;
   margin: 0;
   padding: 5%;
   margin: 2% 0;
@@ -172,6 +171,7 @@
 
 @media (min-width: 640px) {
   .ppContainer .orderContainer {
+    border-radius: 5px;
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin: 0 2%;
