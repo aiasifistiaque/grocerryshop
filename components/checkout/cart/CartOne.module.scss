@@ -198,10 +198,10 @@
 			p {
 				margin: 0.5em 0;
 				text-align: left;
-				font-size: 0.8em;
+				font-size: 0.7em;
 
 				@include tab {
-					font-size: 0.9em;
+					font-size: 0.8em;
 				}
 			}
 
@@ -210,10 +210,10 @@
 				color: $secondaryColor;
 				margin: 0.5em 0;
 				text-align: right;
-				font-size: 0.8em;
+				font-size: 0.7em;
 
 				@include tab {
-					font-size: 0.9em;
+					font-size: 0.8em;
 				}
 			}
 		}
