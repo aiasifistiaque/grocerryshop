@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProductList.module.css';
 import Navigation from '../navigation/Navigation';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import addToCartAction from '../../store/actions/cart/addToCartAction';
 import useInCart from '../../hooks/useInCart';
 import removeFromCartAction from '../../store/actions/cart/removeFromCartAction';
+import ButtonPrimary from '../core/buttons/ButtonPrimary';
 
-const PorductList = ({ links, data, to, disableNav }) => {
+const PorductList = ({ links, data, to, disableNav, onLoadMore }) => {
 	const router = useRouter();
 	const { id } = router.query;
+	const { loading, end } = useSelector(state => state.productList);
 	return (
 		<div className={styles.plContainer}>
 			{!disableNav && <Navigation current={id} links={links} />}
@@ -20,6 +22,15 @@ const PorductList = ({ links, data, to, disableNav }) => {
 				{data.map((item, i) => (
 					<ProductItem item={item} to={to} key={i} />
 				))}
+			</div>
+			<div className={styles.loadMore}>
+				{end ? (
+					<h3>End of page</h3>
+				) : loading ? (
+					<ButtonPrimary>loading</ButtonPrimary>
+				) : (
+					<ButtonPrimary onClick={onLoadMore}>Load More</ButtonPrimary>
+				)}
 			</div>
 		</div>
 	);

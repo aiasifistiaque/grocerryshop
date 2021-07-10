@@ -1,6 +1,27 @@
 @import '../../../../styles/imports';
 @import '../../../../node_modules/sass-google-fonts/src/GoogleFonts.scss';
 
+$inputHeight: 45px;
+$inputBorderRadius: 4px;
+
+%inputPartial {
+	input {
+		height: $inputHeight;
+		width: 100%;
+		border: none;
+		padding: 1em 1em;
+		border-radius: $inputBorderRadius;
+		background-color: #f2f2f2;
+		border: 2px solid transparent;
+		outline: none;
+
+		&:focus {
+			border: 2px solid $secondaryColor;
+			outline: none;
+		}
+	}
+}
+
 .inputContainer {
 	display: flex;
 	flex-direction: column;
@@ -12,21 +33,7 @@
 		font-size: 0.8em;
 		margin-bottom: 0.3em;
 	}
-	input {
-		height: 45px;
-		width: 100%;
-		border: none;
-		padding: 1em 1em;
-		border-radius: 4px;
-		background-color: #f2f2f2;
-		border: 2px solid transparent;
-		outline: none;
-
-		&:focus {
-			border: 2px solid $secondaryColor;
-			outline: none;
-		}
-	}
+	@extend %inputPartial;
 }
 
 .submitButton {
@@ -56,6 +63,43 @@
 
 		&:active {
 			background-color: lighten($secondaryColor, 40);
+		}
+	}
+}
+
+.searchInput {
+	@extend %inputPartial;
+	@include flexCenter;
+	padding-bottom: 0;
+	width: 100%;
+	border: 1px solid rgba($secondaryColor, 0.2);
+	border-radius: $inputBorderRadius;
+
+	@include tab {
+		width: 80%;
+	}
+	input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.btnContainer {
+		@include btn-text-unselect;
+		background-color: $secondaryColor;
+		@include flexCenter;
+		height: $inputHeight;
+		width: $inputHeight;
+		color: whitesmoke;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		cursor: pointer;
+		&:hover {
+			@include desktop {
+				background-color: darken($secondaryColor, 10);
+			}
+		}
+		&:active {
+			background-color: lighten($secondaryColor, 20);
+			box-shadow: 5px 5px 5px rgba($secondaryColor, 1) inset;
 		}
 	}
 }

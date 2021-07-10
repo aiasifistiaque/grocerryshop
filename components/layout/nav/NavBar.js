@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 import logoutAction from '../../../store/actions/user/logoutAction';
 import useAuth from '../../../hooks/useAuth';
 
-const NavBar = ({ barPressed, open, close }) => {
+const NavBar = ({ barPressed, open, close, on }) => {
 	const { loading, isLoggedIn } = useAuth();
 	const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ const NavBar = ({ barPressed, open, close }) => {
 				</div>
 
 				<div className={styles.navRight}>
-					<NavRightIcon icon={faSearch} />
+					<NavSearch icon={faSearch} onClick={on} />
 					<Link
 						href={
 							!loading && isLoggedIn
@@ -67,6 +67,14 @@ const NavRightIcon = forwardRef(({ icon, href }, ref) => {
 		</a>
 	);
 });
+
+const NavSearch = ({ onClick, icon }) => {
+	return (
+		<a onClick={onClick}>
+			<FontAwesomeIcon icon={icon} height={15} />
+		</a>
+	);
+};
 
 const NavBrand = () => {
 	return (

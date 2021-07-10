@@ -1,19 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Menu.module.css';
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
 import Link from 'next/link';
 import logoutAction from '../../../store/actions/user/logoutAction';
+import isEmpty from '../../../functions/isEmpty';
 
 const Menu = ({ id }) => {
 	const dispatch = useDispatch();
 	const { user, loading } = useSelector(state => state.user);
 
+	const [name, setName] = useState('...');
+
+	useEffect(() => {
+		!isEmpty(user) && setName(user.name);
+	}, [user]);
+
 	return (
 		<div className={styles.menuSectionContainer}>
 			<div className={styles.overview}>
 				<Image src='/pp.svg' height={100} width={100} />
-				<h3>{loading ? 'loading...' : user.name}</h3>
+				<h3>{name}</h3>
 			</div>
 			<div className={styles.menu}>
 				<div className={styles.header}>

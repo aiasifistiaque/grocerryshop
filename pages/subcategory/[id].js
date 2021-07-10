@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import HomePage from '../../components/layout/HomePage/HomePage';
 import SubCategories from '../../components/category/sub/SubCategories';
 import tagData from '../../data/tagData';
@@ -13,15 +13,21 @@ const Subcategories = () => {
 	const dispatch = useDispatch();
 	const { id } = router.query;
 	const { products, loading, error } = useSelector(state => state.productList);
+	const [page, setPage] = useState(0);
 
 	useEffect(() => {
 		if (id != undefined) {
-			dispatch(getProductsByCategoryAction(id, 'sub'));
+			dispatch(getProductsByCategoryAction(id, 'sub', page));
 		}
-	}, [id]);
+	}, [id, page]);
+
+	const onLoadMore = () => {
+		setPage(page + 1);
+	};
+
 	return (
 		<HomePage>
-			{loading ? (
+			{loading && page < 1 ? (
 				<Loading />
 			) : (
 				!error &&
@@ -37,7 +43,13 @@ const Subcategories = () => {
 								},
 							]}
 						/>
-						<PorductList links={[]} data={products} to='/product' disableNav />
+						<PorductList
+							links={[]}
+							data={products}
+							to='/product'
+							onLoadMore={onLoadMore}
+							disableNav
+						/>
 					</>
 				)
 			)}

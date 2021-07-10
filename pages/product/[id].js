@@ -34,7 +34,7 @@ const Product = () => {
 					<Description></Description>
 					<Return />
 					<Review />
-					<Related items={products} />
+					<Related items={products} product={product} />
 					<br />
 					<br />
 					<br />

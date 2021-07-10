@@ -13,11 +13,12 @@ export const productListReducer = (
 ) => {
 	switch (action.type) {
 		case getProductListRequest:
-			return { loading: true, products: [] };
+			return { ...state, loading: true };
 		case getProductListSuccess:
 			return {
 				loading: false,
-				products: action.payload,
+				products: action.payload.data,
+				end: action.payload.end,
 			};
 		case getProductListFail:
 			return { loading: false, error: action.payload };

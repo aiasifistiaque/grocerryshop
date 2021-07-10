@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import HomePage from '../../components/layout/HomePage/HomePage';
 import PorductList from '../../components/productlist/PorductList';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,16 +11,22 @@ const Tag = () => {
 	const dispatch = useDispatch();
 	const { id } = router.query;
 	const { products, loading, error } = useSelector(state => state.productList);
+	const [page, setPage] = useState(0);
 
 	useEffect(() => {
 		if (id != undefined) {
-			dispatch(getProductsByCategoryAction(id, 'tag'));
+			dispatch(getProductsByCategoryAction(id, 'tag', page));
 		}
-	}, [id]);
+	}, [id, page]);
+
+	const onLoadMore = () => {
+		setPage(page + 1);
+	};
+
 	return (
 		<HomePage>
 			<div style={{ paddingTop: '10vh' }} />
-			{loading ? (
+			{loading && page < 1 ? (
 				<Loading />
 			) : (
 				!error &&
@@ -37,6 +43,7 @@ const Tag = () => {
 							},
 						]}
 						data={products}
+						onLoadMore={onLoadMore}
 						to='/product'
 					/>
 				)

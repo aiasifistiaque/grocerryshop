@@ -29,6 +29,16 @@ export const getProfileRequest = 'GET_PROFILE_REQUEST';
 export const getProfileSuccess = 'GET_PROFILE_SUCCESS';
 export const getProfileFail = 'GET_PROFILE_FAIL';
 
+/**Edit profile */
+export const editProfileRequest = 'EDIT_PROFILE_REQUEST';
+export const editProfileSuccess = 'EDIT_PROFILE_SUCCESS';
+export const editProfileFail = 'EDIT_PROFILE_FAIL';
+
+/**Change Password */
+export const changePasswordRequest = 'CHANGE_PASSWORD_REQUEST';
+export const changePasswordSuccess = 'CHANGE_PASSWORD_SUCCESS';
+export const changePasswordFail = 'CHANGE_PASSWORD_FAIL';
+
 /**product list*/
 export const getProductListRequest = 'GET_PRODUCT_LIST_REQUEST';
 export const getProductListSuccess = 'GET_PRODUCT_LIST_SUCCESS';
@@ -73,6 +83,13 @@ export const createOrderFail = 'CREATE_ORDER_FAIL';
 export const getOrderRequest = 'GET_ORDER_REQUEST';
 export const getOrderSuccess = 'GET_ORDER_SUCCESS';
 export const getOrderFail = 'GET_ORDER_FAIL';
+
+/**
+ * Search for product
+ */
+export const searchRequest = 'SEARCH_REQUEST';
+export const searchSuccess = 'SEARCH_SUCCESS';
+export const searchFail = 'SEARCH_FAIL';
 
 /**shipping address
  *

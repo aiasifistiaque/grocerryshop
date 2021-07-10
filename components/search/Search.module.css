@@ -1,0 +1,347 @@
+/* Margin */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 1.5rem;
+}
+
+.px-3 {
+  padding: 0 2rem;
+}
+
+.px-4 {
+  padding: 0 3rem;
+}
+
+.px-5 {
+  padding: 0 4rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.searchPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 60vh;
+  -webkit-transition: visibility 1s linear;
+  transition: visibility 1s linear;
+  padding: 10vh 5% 0 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+  visibility: visible;
+}
+
+@media (min-width: 640px) {
+  .searchPanel {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1008px) {
+  .searchPanel {
+    height: 50vh;
+  }
+}
+
+.searchPanel .closeIcon {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 40px;
+  width: 40px;
+  border-radius: 500px;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 640px) {
+  .searchPanel .closeIcon {
+    margin: 1em;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .searchPanel .closeIcon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.searchPanel .closeIcon:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.searchPanel .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+  margin-bottom: 0;
+}
+
+.panelExpand {
+  height: 80vh;
+}
+
+.spCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-y: scroll;
+}
+
+@media (min-width: 640px) {
+  .spCardContainer {
+    width: 80%;
+  }
+}
+
+.spCardContainer .spCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Montserrat;
+  padding: 0.5em 1em;
+  border-bottom: 3px solid whitesmoke;
+  cursor: pointer;
+}
+
+.spCardContainer .spCard:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 1008px) {
+  .spCardContainer .spCard:hover {
+    background-color: whitesmoke;
+  }
+  .spCardContainer .spCard:hover .cardText h4 {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+}
+
+.spCardContainer .spCard .cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0.5em;
+}
+
+.spCardContainer .spCard .cardText h4 {
+  margin-bottom: 0.2em;
+}
+
+.spCardContainer .spCard .cardText p {
+  font-size: 0.7em;
+}
+
+@media (min-width: 640px) {
+  .spCardContainer .spCard .cardText p {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1008px) {
+  .spCardContainer .spCard .cardText p {
+    font-size: 0.9em;
+  }
+}
+
+.searchHidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 60vh;
+  -webkit-transition: visibility 1s linear;
+  transition: visibility 1s linear;
+  padding: 10vh 5% 0 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+  visibility: hidden;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .searchHidden {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1008px) {
+  .searchHidden {
+    height: 50vh;
+  }
+}
+
+.searchLoading {
+  margin: 2em 0;
+}
+
+.searchLoading h3 {
+  font-family: Montserrat;
+}
+/*# sourceMappingURL=Search.module.css.map */

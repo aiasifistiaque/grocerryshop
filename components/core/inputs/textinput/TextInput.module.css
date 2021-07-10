@@ -121,6 +121,22 @@
   padding: 4rem;
 }
 
+.inputContainer input, .searchInput input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  padding: 1em 1em;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.inputContainer input:focus, .searchInput input:focus {
+  border: 2px solid darkslateblue;
+  outline: none;
+}
+
 .inputContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,22 +153,6 @@
   font-family: Montserrat;
   font-size: 0.8em;
   margin-bottom: 0.3em;
-}
-
-.inputContainer input {
-  height: 45px;
-  width: 100%;
-  border: none;
-  padding: 1em 1em;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  border: 2px solid transparent;
-  outline: none;
-}
-
-.inputContainer input:focus {
-  border: 2px solid darkslateblue;
-  outline: none;
 }
 
 .submitButton {
@@ -187,5 +187,75 @@
 
 .submitButton input:active {
   background-color: #bbb5df;
+}
+
+.searchInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 0;
+  width: 100%;
+  border: 1px solid rgba(72, 61, 139, 0.2);
+  border-radius: 4px;
+}
+
+@media (min-width: 640px) {
+  .searchInput {
+    width: 80%;
+  }
+}
+
+.searchInput input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.searchInput .btnContainer {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 45px;
+  width: 45px;
+  color: whitesmoke;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+
+@media (min-width: 1008px) {
+  .searchInput .btnContainer:hover {
+    background-color: #362d68;
+  }
+}
+
+.searchInput .btnContainer:active {
+  background-color: #7a6ec0;
+  -webkit-box-shadow: 5px 5px 5px darkslateblue inset;
+          box-shadow: 5px 5px 5px darkslateblue inset;
 }
 /*# sourceMappingURL=TextInput.module.css.map */

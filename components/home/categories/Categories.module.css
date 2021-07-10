@@ -175,6 +175,7 @@
 .categoryContainer .cardContainer .card .image {
   -o-object-fit: contain;
      object-fit: contain;
+  z-index: 0;
 }
 
 .categoryContainer .cardContainer .card h3 {

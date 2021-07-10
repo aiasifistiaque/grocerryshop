@@ -27,6 +27,7 @@
 			text-align: center;
 			margin: 2.5em auto 1em auto;
 		}
+
 		.orderCard {
 			display: flex;
 			justify-content: space-between;
@@ -114,4 +115,23 @@
 	@include tab {
 		align-items: flex-start;
 	}
+}
+
+@mixin success-error($color: black) {
+	font-family: Montserrat;
+	margin: 0 0.25em;
+	margin-bottom: 1em;
+	flex: 1;
+	color: $color;
+	padding: 1em;
+	border-radius: 5px;
+	background-color: rgba($color, 0.1);
+}
+
+.successful {
+	@include success-error(teal);
+}
+
+.errorText {
+	@include success-error(crimson);
 }

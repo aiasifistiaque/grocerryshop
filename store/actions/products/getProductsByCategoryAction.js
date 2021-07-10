@@ -6,8 +6,12 @@ import {
 	getProductListFail,
 } from '../../storeConstants';
 
-const getProductsByCategoryAction = (id, type) => async dispatch => {
+const getProductsByCategoryAction = (id, type, page) => async (
+	dispatch,
+	getState
+) => {
 	let target;
+
 	if (type == 'sub') {
 		target = `${api.productsBySubcategory}/${id}`;
 	} else if (type == 'tag') {
@@ -18,9 +22,17 @@ const getProductsByCategoryAction = (id, type) => async dispatch => {
 
 	try {
 		dispatch({ type: getProductListRequest });
-		const { data } = await axios.post(target, { page: 0 }, api.config);
+		const { data } = await axios.post(target, { page: page || 0 }, api.config);
 
-		dispatch({ type: getProductListSuccess, payload: data });
+		const list = getState().productList.products;
+
+		dispatch({
+			type: getProductListSuccess,
+			payload: {
+				data: page > 0 ? list.concat(data) : data,
+				end: data.length == 0 && true,
+			},
+		});
 	} catch (error) {
 		dispatch({
 			type: getProductListFail,
