@@ -426,6 +426,14 @@
 .cartOneContainer .cardContainer .total p {
   margin: 0.5em 0;
   text-align: left;
+  font-size: 0.7em;
+  color: #333333;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .total p {
+    font-size: 0.9em;
+  }
 }
 
 .cartOneContainer .cardContainer .total span {
@@ -433,6 +441,13 @@
   color: darkslateblue;
   margin: 0.5em 0;
   text-align: right;
+  font-size: 0.7em;
+}
+
+@media (min-width: 640px) {
+  .cartOneContainer .cardContainer .total span {
+    font-size: 0.9em;
+  }
 }
 
 .empty {
