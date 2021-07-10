@@ -22,12 +22,12 @@ const Search = ({ active, off }) => {
 	}, [searchString]);
 
 	const variants = {
-		open: { opacity: 1, y: 0 },
+		open: { opacity: 1, y: '0%' },
 		closed: { opacity: 0, y: '-100%' },
 	};
 	return (
 		<motion.div
-			animate={active ? 'open' : 'close'}
+			animate={active ? 'open' : 'closed'}
 			variants={variants}
 			className={
 				active
