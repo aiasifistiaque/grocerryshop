@@ -122,7 +122,7 @@
   padding: 4rem;
 }
 
-.heroContainer {
+.heroContainer, .heroOne, .heroTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,12 +133,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../../../public/hero.jpeg");
   background-position: center;
   background-size: cover;
 }
 
-.heroContainer .overlay {
+.heroContainer .overlay, .heroOne .overlay, .heroTwo .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,13 +152,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  min-height: 70vh;
+  min-height: 35vh;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10%;
   text-align: center;
 }
 
-.heroContainer .overlay h1 {
+@media (min-width: 640px) {
+  .heroContainer .overlay, .heroOne .overlay, .heroTwo .overlay {
+    min-height: 80vh;
+  }
+}
+
+.heroContainer .overlay h1, .heroOne .overlay h1, .heroTwo .overlay h1 {
   font-size: 2em;
   font-family: Montserrat;
   color: white;
@@ -169,8 +174,20 @@
 }
 
 @media (min-width: 640px) {
-  .heroContainer .overlay h1 {
+  .heroContainer .overlay h1, .heroOne .overlay h1, .heroTwo .overlay h1 {
     font-size: 3em;
   }
+}
+
+.heroContainer {
+  background-image: url("../../../public/hero.jpeg");
+}
+
+.heroOne {
+  background-image: url("../../../public/hero1.jpeg");
+}
+
+.heroTwo {
+  background-image: url("../../../public/hero2.jpeg");
 }
 /*# sourceMappingURL=Hero.module.css.map */

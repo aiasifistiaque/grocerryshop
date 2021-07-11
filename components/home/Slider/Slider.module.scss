@@ -1,0 +1,31 @@
+@import '../../../styles/imports';
+
+.container {
+	margin-top: 25vh;
+	margin-bottom: 20vh;
+	@include flexCenter;
+	@include tab {
+		margin-top: 35vh;
+		margin-bottom: 40vh;
+	}
+}
+
+.arrowContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	position: absolute;
+	top: 47.5vh;
+	z-index: 15;
+	a {
+		padding: 50px 20px;
+		background-color: rgba(black, 1);
+		color: white;
+		cursor: pointer;
+		@include btn-text-unselect;
+
+		&:hover {
+			background-color: darken(rgba(black, 0.4), 50);
+		}
+	}
+}
