@@ -99,7 +99,13 @@ const SearchProductContainer = ({ children }) => {
 const SearchProducts = ({ item, onClick }) => {
 	return (
 		<div className={styles.spCard} onClick={onClick}>
-			<Image src={item.image} height={75} width={75} objectFit='cover' />
+			<Image
+				src={item.image}
+				alt={item.name}
+				height={75}
+				width={75}
+				objectFit='cover'
+			/>
 			<div className={styles.cardText}>
 				<h4>{item.name}</h4>
 				<p>{`${general.takaSymbol} ${item.price}`}</p>

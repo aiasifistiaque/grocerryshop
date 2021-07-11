@@ -11,7 +11,11 @@ import HeroOne from '../hero/HeroOne';
 import HeroTwo from '../hero/HeroTwo';
 
 export default function Slider() {
-	const compArray = [<Hero />, <HeroOne />, <HeroTwo />];
+	const compArray = [
+		<Hero key={1} />,
+		<HeroOne key={2} />,
+		<HeroTwo key={3} />,
+	];
 	const [index, setIndex] = useState(0);
 
 	const [reverse, setReverse] = useState(false);
@@ -57,12 +61,12 @@ export default function Slider() {
 		<div className={styles.container}>
 			{transitions((style, i) => (
 				<animated.div
+					key={i}
 					style={{
 						position: 'absolute',
 						width: '100vw',
 						...style,
-					}}
-					key={i}>
+					}}>
 					{compArray[i]}
 				</animated.div>
 			))}
