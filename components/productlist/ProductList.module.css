@@ -271,7 +271,6 @@
   .plContainer .cardContainer .card .prod:hover {
     -webkit-transform: scale(1.11);
             transform: scale(1.11);
-    background-color: whitesmoke;
   }
   .plContainer .cardContainer .card .prod:hover h3 {
     -webkit-text-decoration-line: underline;

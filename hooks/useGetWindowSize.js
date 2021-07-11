@@ -4,6 +4,7 @@ const useGetWindowSize = () => {
 	const [height, setHeight] = useState(0);
 	const [width, setWidth] = useState(0);
 	const [isDesktop, setIsDesktop] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		setHeight(window.innerHeight);
@@ -17,10 +18,11 @@ const useGetWindowSize = () => {
 		}
 
 		window.addEventListener('resize', handleResize);
+		setLoading(false);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
-	return { height, width, isDesktop };
+	return { height, width, isDesktop, loading };
 };
 
 export default useGetWindowSize;

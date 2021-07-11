@@ -5,14 +5,15 @@ import {
 	faSearch,
 	faUser,
 	faShoppingCart,
+	faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
-import logoutAction from '../../../store/actions/user/logoutAction';
 import useAuth from '../../../hooks/useAuth';
+import useCart from '../../../hooks/useCart';
 
-const NavBar = ({ barPressed, open, close, on }) => {
+const NavBar = ({ barPressed, open, close, on, search }) => {
 	const { loading, isLoggedIn } = useAuth();
 	const dispatch = useDispatch();
 
@@ -29,7 +30,7 @@ const NavBar = ({ barPressed, open, close, on }) => {
 				</div>
 
 				<div className={styles.navRight}>
-					<NavSearch icon={faSearch} onClick={on} />
+					<NavSearch icon={search ? faTimes : faSearch} onClick={on} />
 					<Link
 						href={
 							!loading && isLoggedIn
@@ -40,10 +41,10 @@ const NavBar = ({ barPressed, open, close, on }) => {
 						<NavRightIcon icon={faUser} />
 					</Link>
 					<Link href='/checkout/cart' passHref>
-						<NavRightIcon icon={faShoppingCart} />
+						<NavCart icon={faShoppingCart} />
 					</Link>
 
-					{loading ? null : isLoggedIn ? (
+					{/* {loading ? null : isLoggedIn ? (
 						<div onClick={() => dispatch(logoutAction())}>
 							<a style={{ fontSize: '.8em', textTransform: 'lowercase' }}>
 								logout
@@ -53,12 +54,24 @@ const NavBar = ({ barPressed, open, close, on }) => {
 						<Link href='/login'>
 							<a>Login</a>
 						</Link>
-					)}
+					)} */}
 				</div>
 			</div>
 		</>
 	);
 };
+
+const NavCart = forwardRef(({ icon, href }, ref) => {
+	const { count } = useCart();
+	return (
+		<>
+			<a href={href} ref={ref}>
+				<FontAwesomeIcon icon={icon} height={15} />
+			</a>
+			<span>{count}</span>
+		</>
+	);
+});
 
 const NavRightIcon = forwardRef(({ icon, href }, ref) => {
 	return (
@@ -71,7 +84,7 @@ const NavRightIcon = forwardRef(({ icon, href }, ref) => {
 const NavSearch = ({ onClick, icon }) => {
 	return (
 		<a onClick={onClick}>
-			<FontAwesomeIcon icon={icon} height={15} />
+			<FontAwesomeIcon icon={icon} height={15} className={styles.searchIcon} />
 		</a>
 	);
 };

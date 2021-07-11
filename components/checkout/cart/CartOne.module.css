@@ -432,7 +432,7 @@
 
 @media (min-width: 640px) {
   .cartOneContainer .cardContainer .total p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 
@@ -441,7 +441,7 @@
   color: darkslateblue;
   margin: 0.5em 0;
   text-align: right;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 @media (min-width: 640px) {

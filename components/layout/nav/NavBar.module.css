@@ -189,6 +189,7 @@
   -ms-user-select: none;
   user-select: none;
   text-transform: uppercase;
+  padding-right: 1em;
 }
 
 @media (min-width: 640px) {
@@ -206,13 +207,14 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
+  margin: 0 0.5em;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
 @media (min-width: 640px) {
   .navbar .navRight a {
-    margin: 0 1em;
+    margin: 0 0.8em;
   }
 }
 
@@ -220,6 +222,31 @@
   .navbar .navRight a:hover {
     border-bottom: 2px solid white;
   }
+}
+
+.navbar .navRight span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 16px;
+  width: 16px;
+  border-radius: 500px;
+  margin: -15px 0 0 -15px;
+  background-color: white;
+  color: black;
+  font-size: 0.6em;
+  font-weight: 800;
+  padding-left: 2px;
 }
 
 .navbar .navcollapseStraight {
@@ -233,5 +260,11 @@
   transition: 0.5s;
   height: 16px;
   color: white;
+}
+
+.searchIcon {
+  -webkit-transition: ease-in-out 5s;
+  transition: ease-in-out 5s;
+  width: 15px;
 }
 /*# sourceMappingURL=NavBar.module.css.map */

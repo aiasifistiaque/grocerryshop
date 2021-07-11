@@ -25,8 +25,7 @@ const CartOne = ({ items }) => {
 		<div className={styles.cartOneContainer}>
 			<div className={styles.cartHeader}>
 				<h2>My Cart</h2>
-
-				<LongButton onClick={toShipping}>Checkout</LongButton>
+				{count > 0 && <LongButton onClick={toShipping}>Checkout</LongButton>}
 			</div>
 
 			{count == 0 ? (

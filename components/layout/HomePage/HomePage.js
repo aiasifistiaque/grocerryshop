@@ -8,17 +8,23 @@ import useGetWindowSize from '../../../hooks/useGetWindowSize';
 import Sidebar from '../sidebar/Sidebar';
 import Footer from '../footer/Footer';
 import Search from '../../search/Search';
+import PageLoading from '../../core/pageloading/PageLoading';
 
 const HomePage = ({ children, style, inv }) => {
-	const { isDesktop } = useGetWindowSize();
+	const { isDesktop, loading } = useGetWindowSize();
 	const [openNav, setOpenNav] = useState(false);
 	const [searchActive, setSearchActive] = useState(false);
+	const [load, setLoad] = useState(false);
 
 	useEffect(() => {
-		if (isDesktop) {
-			!inv && setOpenNav(true);
+		if (!loading) {
+			if (isDesktop) {
+				!inv && setOpenNav(true);
+			}
+			setLoad(true);
 		}
-	}, [isDesktop]);
+	}, [loading]);
+
 	return (
 		<div>
 			<Head>
@@ -37,24 +43,29 @@ const HomePage = ({ children, style, inv }) => {
 				close={() => setOpenNav(false)}
 				select={item => setScrollItem(item)}
 				on={() => setSearchActive(!searchActive)}
+				search={searchActive}
 			/>
 
 			<Search active={searchActive} off={() => setSearchActive(false)} />
 
-			<main
-				className={searchActive ? styles.containerOverLay : styles.container}
-				//onClick={() => setOpenNav(false)}
-				onClick={() => setSearchActive(false)}
-				style={style || {}}>
-				{searchActive && <div className={styles.overlay} />}
+			{!load ? (
+				<PageLoading />
+			) : (
+				<main
+					className={searchActive ? styles.containerOverLay : styles.container}
+					//onClick={() => setOpenNav(false)}
+					onClick={() => setSearchActive(false)}
+					style={style || {}}>
+					{searchActive && <div className={styles.overlay} />}
 
-				<Sidebar barPressed={openNav} />
-				<div
-					className={styles.homeMain}
-					style={{ marginLeft: openNav && isDesktop ? 250 : 0 }}>
-					{children}
-				</div>
-			</main>
+					<Sidebar barPressed={openNav} inv={!isDesktop ? true : inv} />
+					<div
+						className={styles.homeMain}
+						style={{ marginLeft: openNav && isDesktop ? 250 : 0 }}>
+						{children}
+					</div>
+				</main>
+			)}
 			<Footer />
 		</div>
 	);

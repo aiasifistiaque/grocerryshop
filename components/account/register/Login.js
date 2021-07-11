@@ -60,9 +60,9 @@ const Login = () => {
 			)}
 			<a className={styles.forgotPassword}>Forgot Password?</a>
 
-			{validationError && (
+			{(error || validationError) && (
 				<div className={styles.error}>
-					<p>ERROR: *{validationErrorText}</p>
+					<p>ERROR: *{error || validationErrorText}</p>
 				</div>
 			)}
 

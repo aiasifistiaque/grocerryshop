@@ -83,9 +83,9 @@ const Register = () => {
 			) : (
 				<FormButton onClick={registerUser}>Register</FormButton>
 			)}
-			{validationError && (
+			{(error || validationError) && (
 				<div className={styles.error}>
-					<p>ERROR: *{validationErrorText}</p>
+					<p>ERROR: *{error || validationErrorText}</p>
 				</div>
 			)}
 

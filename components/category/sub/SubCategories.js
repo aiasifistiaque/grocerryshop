@@ -18,14 +18,17 @@ const SubCategories = ({ links, data, to }) => {
 				{data.map((item, i) => (
 					<Link href={`${to}/${item.name}`} key={i}>
 						<div className={styles.card}>
-							<Image
-								alt={item.name}
-								src={item.image}
-								width={150}
-								height={150}
-								className={styles.image}
-							/>
-							<h3>{item.name}</h3>
+							<div className={styles.imageContainer}>
+								<Image
+									alt={item.name}
+									src={item.image}
+									width={100}
+									height={100}
+									className={styles.image}
+								/>
+							</div>
+
+							<h4>{item.name}</h4>
 						</div>
 					</Link>
 				))}
