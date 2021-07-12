@@ -18,6 +18,7 @@ const PorductList = ({ links, data, to, disableNav, onLoadMore }) => {
 		<div className={styles.plContainer}>
 			{!disableNav && <Navigation current={id} links={links} />}
 			<h2>{id} Items</h2>
+
 			<div className={styles.cardContainer}>
 				{data.map((item, i) => (
 					<ProductItem item={item} to={to} key={i} />

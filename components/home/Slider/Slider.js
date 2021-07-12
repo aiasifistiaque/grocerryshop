@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 import styles from './Slider.module.css';
-import {
-	faChevronLeft,
-	faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Hero from '../hero/Hero';
 import HeroOne from '../hero/HeroOne';
 import HeroTwo from '../hero/HeroTwo';

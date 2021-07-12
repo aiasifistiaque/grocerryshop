@@ -49,6 +49,13 @@ export const getProductRequest = 'GET_PRODUCT_REQUEST';
 export const getProductSuccess = 'GET_PRODUCT_SUCCESS';
 export const getProductFail = 'GET_PRODUCT_FAIL';
 
+/**list of
+ * sub category
+ */
+export const getSubRequest = 'GET_SUB_REQUEST';
+export const getSubSuccess = 'GET_SUB_SUCCESS';
+export const getSubFail = 'GET_SUB_FAIL';
+
 /**product list
  * by category
  */

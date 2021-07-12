@@ -5,6 +5,9 @@ import {
 	getProductRequest,
 	getProductSuccess,
 	getProductFail,
+	getSubRequest,
+	getSubSuccess,
+	getSubFail,
 } from '../storeConstants';
 
 export const productListReducer = (
@@ -41,6 +44,23 @@ export const productReducer = (
 				product: action.payload,
 			};
 		case getProductFail:
+			return { loading: false, error: action.payload };
+
+		default:
+			return state;
+	}
+};
+
+export const subReducer = (state = { sub: [], loading: true }, action) => {
+	switch (action.type) {
+		case getSubRequest:
+			return { sub: [], loading: true };
+		case getSubSuccess:
+			return {
+				loading: false,
+				sub: action.payload,
+			};
+		case getSubFail:
 			return { loading: false, error: action.payload };
 
 		default:

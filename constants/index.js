@@ -22,6 +22,9 @@ export const api = {
 	productsBySubcategory: `${server}/categories/subcategory`, //sub cateogry
 	productsByTag: `${server}/categories/tag`, //tag
 
+	/**get products by*/
+	subs: `${server}/categories/sub`, //categories
+
 	/**products */
 	products: `${server}/products`,
 	search: `${server}/search`,

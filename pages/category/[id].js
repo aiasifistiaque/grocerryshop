@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import getProductsByCategoryAction from '../../store/actions/products/getProductsByCategoryAction';
 import Loading from '../../components/core/loading/Loading';
+import getSubAction from '../../store/actions/products/getSubAction';
 
 const Category = () => {
 	const router = useRouter();
@@ -15,10 +16,12 @@ const Category = () => {
 	const { id } = router.query;
 	const { products, loading, error } = useSelector(state => state.productList);
 	const [page, setPage] = useState(0);
+	const sub = useSelector(state => state.sub);
 
 	useEffect(() => {
 		if (id != undefined) {
 			dispatch(getProductsByCategoryAction(id, 'category', page));
+			page == 0 && dispatch(getSubAction('sub', id));
 		}
 	}, [id, page]);
 
@@ -28,11 +31,15 @@ const Category = () => {
 
 	return (
 		<HomePage>
-			{loading && page < 1 ? (
+			{loading && sub.loading && page < 1 ? (
 				<Loading />
 			) : (
 				<>
-					<SubCategories links={[]} data={subCategoryData} to='/subcategory' />
+					{!sub.error && sub.sub && sub.sub.length > 0 ? (
+						<SubCategories links={[]} data={sub.sub} to='/subcategory' />
+					) : (
+						<div style={{ marginTop: '12vh' }} />
+					)}
 					{!error && (
 						<PorductList
 							links={[]}
