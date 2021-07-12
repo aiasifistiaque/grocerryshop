@@ -5,7 +5,7 @@ const Hero = () => {
 	return (
 		<div className={styles.heroContainer}>
 			<div className={styles.overlay}>
-				<h1>Baal Saal BAZAAR</h1>
+				<h1>Groceries Delivered in 1 hour</h1>
 			</div>
 		</div>
 	);

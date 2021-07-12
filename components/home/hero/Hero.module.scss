@@ -14,20 +14,22 @@
 		@include flexCenter(column);
 		width: 100%;
 		min-height: 35vh;
-		background-color: rgba(black, 0.5);
+		background-color: rgba($secondaryColor, 0.7);
 		padding: 10%;
 		text-align: center;
 		@include tab {
 			min-height: 80vh;
 		}
 		h1 {
-			font-size: 2em;
+			width: 80%;
+			font-size: 1.5em;
 			font-family: Montserrat;
 			color: white;
 			letter-spacing: 4px;
 			font-weight: 700;
 			text-shadow: 4px 4px 5px rgba(black, 0.1);
 			@include tab {
+				width: 60%;
 				font-size: 3em;
 			}
 		}

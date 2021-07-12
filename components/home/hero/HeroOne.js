@@ -5,7 +5,7 @@ const HeroOne = () => {
 	return (
 		<div className={styles.heroOne}>
 			<div className={styles.overlay}>
-				<h1>Best Quality Product</h1>
+				<h1>Covid Essentials</h1>
 			</div>
 		</div>
 	);

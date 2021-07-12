@@ -27,7 +27,7 @@ export default function Slider() {
 			opacity: 1,
 			transform: reverse ? `translateX(100%)` : `translateX(-100%)`,
 		},
-		delay: 10,
+		delay: 1000,
 		config: { duration: 600 },
 	});
 
@@ -35,7 +35,7 @@ export default function Slider() {
 		setInterval(function () {
 			setReverse(false);
 			setIndex(state => (state + 1) % 3);
-		}, 5000);
+		}, 7000);
 	}, []);
 
 	const next = () => {
