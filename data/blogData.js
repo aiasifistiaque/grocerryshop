@@ -1,5 +1,7 @@
 //
 
+import { shopData } from '../constants';
+
 const blogData = [
 	{
 		id: 1,
@@ -11,7 +13,7 @@ const blogData = [
 	{
 		id: 2,
 		image: '/blog/two.jpeg',
-		title: 'Baal Saal online shopping store Grand Opening',
+		title: `${shopData.name} online shopping store Grand Opening`,
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 	},

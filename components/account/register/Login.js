@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import loginAction from '../../../store/actions/user/loginAction';
 import validateEmail from '../../../functions/validateEmail';
 import { useRouter } from 'next/router';
+import { shopData } from '../../../constants';
 
 const Login = () => {
 	const dispatch = useDispatch();
@@ -71,7 +72,7 @@ const Login = () => {
 				<a>Privacy Policy</a>
 			</p>
 			<h4>
-				New to Baal Saal?{' '}
+				New to {shopData.name}?{' '}
 				<Link href='/register'>
 					<a>Register</a>
 				</Link>

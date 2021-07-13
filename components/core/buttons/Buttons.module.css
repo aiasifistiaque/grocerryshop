@@ -280,4 +280,38 @@
             text-decoration-line: underline;
   }
 }
+
+.submitButton {
+  width: 100%;
+}
+
+.submitButton input {
+  display: inline-block;
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  font-size: 0.9em;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .submitButton input {
+    width: 140px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .submitButton input:hover {
+    background-color: #362d68;
+  }
+}
+
+.submitButton input:active {
+  background-color: #bbb5df;
+}
 /*# sourceMappingURL=Buttons.module.css.map */

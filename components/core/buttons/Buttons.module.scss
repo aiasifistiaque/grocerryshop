@@ -65,3 +65,34 @@
 		}
 	}
 }
+
+.submitButton {
+	width: 100%;
+
+	input {
+		display: inline-block;
+		background-color: $secondaryColor;
+		color: white;
+		border: none;
+		cursor: pointer;
+		padding: 14px 30px;
+		font-size: 0.9em;
+		border-radius: 4px;
+		letter-spacing: 1px;
+		margin: 0;
+		width: 100%;
+		@include tab {
+			width: 140px;
+		}
+
+		@include desktop {
+			&:hover {
+				background-color: darken($secondaryColor, 10);
+			}
+		}
+
+		&:active {
+			background-color: lighten($secondaryColor, 40);
+		}
+	}
+}

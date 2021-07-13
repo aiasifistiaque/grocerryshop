@@ -6,8 +6,10 @@ const FormButton = ({ children, onClick, rounded, disabled }) => {
 		? `${styles.buttonPrimary} ${styles.rounded}`
 		: `${styles.buttonPrimary}`;
 	return (
-		<div className={styles.submit} onClick={onClick}>
-			<a className={classes}>{children}</a>
+		<div className={styles.submit}>
+			<a className={classes} onClick={onClick}>
+				{children}
+			</a>
 		</div>
 	);
 };

@@ -88,3 +88,7 @@ export const general = {
 	vat: 0,
 	shipping: 0,
 };
+
+export const shopData = {
+	name: 'Grocery',
+};

@@ -11,6 +11,9 @@ import {
 import addressReducer from './addressReducer';
 import { orderReducer, getOrdersReducer } from './order';
 import searchReducer from './searchReducer';
+import { getAllUserReducer } from './admin';
+import { editOrderStatusReducer } from '../mix/editOrderStatus';
+import { changeRoleReducer } from '../mix/editUserRole';
 
 const rootReducer = combineReducers({
 	auth: authReducer,
@@ -18,6 +21,8 @@ const rootReducer = combineReducers({
 	login: loginReducer,
 	user: userReducer,
 	password: changePasswordReducer,
+
+	allUsers: getAllUserReducer,
 
 	cart: cartReducer,
 	address: addressReducer,
@@ -29,6 +34,9 @@ const rootReducer = combineReducers({
 
 	order: orderReducer,
 	orderList: getOrdersReducer,
+
+	editOrderStatus: editOrderStatusReducer,
+	changeRole: changeRoleReducer,
 });
 
 export default rootReducer;

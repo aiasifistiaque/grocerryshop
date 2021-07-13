@@ -31,7 +31,7 @@ const Product = () => {
 			) : (
 				<>
 					<Prod productData={product} />
-					<Description></Description>
+					<Description>{product.description}</Description>
 					<Return />
 					<Review />
 					<Related items={products} product={product} />

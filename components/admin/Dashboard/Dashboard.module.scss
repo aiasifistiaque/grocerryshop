@@ -1,0 +1,54 @@
+@import '../../../styles/imports';
+
+%admin-page-main {
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+	padding: 2% 0;
+	flex-direction: column;
+
+	min-height: 100vh;
+	@include tab {
+		flex-direction: row;
+	}
+	@include desktop {
+		padding: 2% 10%;
+	}
+}
+
+.adminPage {
+	@extend %admin-page-main;
+	padding-top: 12vh;
+	font-family: Montserrat;
+	padding-left: 2%;
+	padding-right: 2%;
+
+	flex-direction: column;
+
+	@include tab {
+		padding-top: 15vh;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.dashboard {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 1em;
+		flex-wrap: wrap;
+		margin: 1em 0;
+	}
+}
+
+.dashboardItemContainer {
+	background-color: white;
+	padding: 1em 1em;
+	border-radius: 10px;
+	min-width: 200px;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+	h5 {
+		margin-bottom: 1em;
+	}
+}

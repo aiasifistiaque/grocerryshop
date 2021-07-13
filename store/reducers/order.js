@@ -36,7 +36,7 @@ export const getOrdersReducer = (
 ) => {
 	switch (action.type) {
 		case getOrderRequest:
-			return { loading: true, orders: [], success: false, count: 0 };
+			return { ...state, loading: true, success: false, count: 0 };
 		case getOrderSuccess:
 			return {
 				orders: action.payload.orders,

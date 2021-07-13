@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { useDispatch } from 'react-redux';
 import useAuth from '../../../hooks/useAuth';
 import useCart from '../../../hooks/useCart';
+import { shopData } from '../../../constants';
 
 const NavBar = ({ barPressed, open, close, on, search }) => {
 	const { loading, isLoggedIn } = useAuth();
@@ -93,7 +94,7 @@ const NavBrand = () => {
 	return (
 		<>
 			<Link href='/'>
-				<a>BAAL SAAL</a>
+				<a>{shopData.name}</a>
 			</Link>
 		</>
 	);
