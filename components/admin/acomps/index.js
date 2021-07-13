@@ -47,3 +47,17 @@ export const DashItemContainer = ({ title, children }) => {
 		</div>
 	);
 };
+
+export const DashEditContainer = ({ title, children, value, setValue }) => {
+	return (
+		<div className={dashStyles.dashboardItemContainer}>
+			<h5>{title || ''}</h5>
+			<input
+				type='text'
+				value={children}
+				onChange={e => setValue(e.target.value)}
+				placeholder={`Edit ${title}`}
+			/>
+		</div>
+	);
+};

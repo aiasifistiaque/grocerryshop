@@ -51,4 +51,18 @@
 	h5 {
 		margin-bottom: 1em;
 	}
+	input {
+		background-color: $inputColor;
+		border: 2px solid darken($inputColor, 10);
+		width: 80vw;
+		min-width: 200px;
+		height: 40px;
+		border-radius: 4px;
+		margin-bottom: 1em;
+		padding: 0.5em;
+		@include tab {
+			width: 30vw;
+			min-width: 300px;
+		}
+	}
 }

@@ -14,6 +14,7 @@ import searchReducer from './searchReducer';
 import { getAllUserReducer } from './admin';
 import { editOrderStatusReducer } from '../mix/editOrderStatus';
 import { changeRoleReducer } from '../mix/editUserRole';
+import { editProductReducer } from '../mix/editProduct';
 
 const rootReducer = combineReducers({
 	auth: authReducer,
@@ -37,6 +38,7 @@ const rootReducer = combineReducers({
 
 	editOrderStatus: editOrderStatusReducer,
 	changeRole: changeRoleReducer,
+	editProduct: editProductReducer,
 });
 
 export default rootReducer;
