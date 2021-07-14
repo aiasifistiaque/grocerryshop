@@ -37,12 +37,12 @@
 }
 
 .listContainer .listCard p {
-  margin: 0 1em;
+  margin: 1em;
   padding: 0;
 }
 
 .listContainer .listCard a {
-  padding: 0 1em;
+  padding: 1em;
   color: dodgerblue;
 }
 

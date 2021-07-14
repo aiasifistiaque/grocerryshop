@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from './HomePage.module.css';
-import NavBar from '../nav/NavBar';
+import AdminNav from '../nav/AdminNav';
 import useGetWindowSize from '../../../hooks/useGetWindowSize';
 import Sidebar from '../sidebar/Sidebar';
 import Footer from '../footer/Footer';
@@ -38,7 +38,7 @@ const AdminHome = ({ children, style, inv }) => {
 				/>
 			</Head>
 
-			<NavBar
+			<AdminNav
 				barPressed={openNav}
 				open={() => setOpenNav(true)}
 				close={() => setOpenNav(false)}
@@ -47,7 +47,7 @@ const AdminHome = ({ children, style, inv }) => {
 				search={searchActive}
 			/>
 
-			<Search active={searchActive} off={() => setSearchActive(false)} />
+			{/* <Search active={searchActive} off={() => setSearchActive(false)} /> */}
 
 			{!load ? (
 				<PageLoading />
@@ -59,7 +59,11 @@ const AdminHome = ({ children, style, inv }) => {
 					style={style || {}}>
 					{searchActive && <div className={styles.overlay} />}
 
-					<AdminSidebar barPressed={openNav} inv={!isDesktop ? true : inv} />
+					<AdminSidebar
+						barPressed={openNav}
+						inv={!isDesktop ? true : inv}
+						close={() => setOpenNav(false)}
+					/>
 					<div
 						className={styles.homeMain}
 						style={{ marginLeft: openNav && isDesktop ? 250 : 0 }}>

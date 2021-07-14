@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './Sidebar.module.css';
-import categoryData from '../../../data/categoryData';
 import Link from 'next/link';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {
+	faChevronRight,
+	faDoorClosed,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useAuth from '../../../hooks/useAuth';
 import { useDispatch } from 'react-redux';
-import logoutAction from '../../../store/actions/user/logoutAction';
 import { tokenName } from '../../../store/storeConstants';
 
-const AdminSidebar = ({ barPressed, inv }) => {
+const AdminSidebar = ({ barPressed, inv, close }) => {
 	const invSpringStyle = useSpring({
 		from: {
 			x: '0%',
@@ -33,14 +33,13 @@ const AdminSidebar = ({ barPressed, inv }) => {
 		<animated.div
 			className={styles.sidebar}
 			style={inv ? springStyle : invSpringStyle}>
-			<NavItems />
+			<NavItems inv={inv} onItemClick={inv ? close : {}} />
 		</animated.div>
 	);
 };
 
-const NavItems = () => {
+const NavItems = ({ onItemClick }) => {
 	const [loading, setLoading] = useState(true);
-	const dispatch = useDispatch();
 
 	const [isLogged, setIsLogged] = useState(false);
 
@@ -60,17 +59,17 @@ const NavItems = () => {
 			<h4>Menu</h4>
 
 			<Link href={`/admin/dashboard`}>
-				<a>Dashboard</a>
+				<a onClick={onItemClick}>Dashboard</a>
 			</Link>
 			<Link href={`/admin/products`}>
-				<a>Products</a>
+				<a onClick={onItemClick}>Products</a>
 			</Link>
 			<Link href={`/admin/orders`}>
-				<a>Orders</a>
+				<a onClick={onItemClick}>Orders</a>
 			</Link>
 
 			<Link href={`/admin/users`}>
-				<a>Users</a>
+				<a onClick={onItemClick}>Users</a>
 			</Link>
 		</>
 	);
