@@ -14,7 +14,13 @@ const Prod = ({ productData }) => {
 
 	return (
 		<div className={styles.productPage}>
-			<Image src={productData.image} alt='product' height={300} width={300} />
+			<Image
+				unoptimized={true}
+				src={productData.image}
+				alt='product'
+				height={300}
+				width={300}
+			/>
 			<div className={styles.details}>
 				<h2>
 					{productData.name} {productData.size}

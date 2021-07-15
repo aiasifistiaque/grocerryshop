@@ -14,6 +14,7 @@ const Categories = () => {
 					<Link href={`/category/${item.name}`} key={item.id}>
 						<div className={styles.card}>
 							<Image
+								unoptimized={true}
 								src={item.image}
 								alt={item.name}
 								width={150}

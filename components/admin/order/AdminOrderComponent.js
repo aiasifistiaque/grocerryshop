@@ -82,6 +82,7 @@ const OrderItems = ({ items }) => {
 				<div className={styles.itemCard} key={item._id}>
 					<div className={styles.imageContainer}>
 						<Image
+							unoptimized={true}
 							src={item.image}
 							alt={item.name}
 							height={50}

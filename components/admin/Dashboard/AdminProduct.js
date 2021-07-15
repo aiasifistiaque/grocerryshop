@@ -43,7 +43,12 @@ const AdminProduct = ({ id }) => {
 			<h3>Product</h3>
 			<br />
 			<DashItemContainer title='Image'>
-				<Image src={product.image} height={200} width={200} />
+				<Image
+					src={product.image}
+					height={200}
+					width={200}
+					unoptimized={true}
+				/>
 			</DashItemContainer>
 			<br />
 

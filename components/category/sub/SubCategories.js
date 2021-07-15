@@ -20,6 +20,7 @@ const SubCategories = ({ links, data, to }) => {
 						<div className={styles.card}>
 							<div className={styles.imageContainer}>
 								<Image
+									unoptimized={true}
 									alt={item.name}
 									src={item.image}
 									width={100}

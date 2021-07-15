@@ -100,6 +100,7 @@ const SearchProducts = ({ item, onClick }) => {
 	return (
 		<div className={styles.spCard} onClick={onClick}>
 			<Image
+				unoptimized={true}
 				src={item.image}
 				alt={item.name}
 				height={75}

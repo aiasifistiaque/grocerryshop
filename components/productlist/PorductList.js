@@ -46,6 +46,7 @@ const ProductItem = ({ item, to }) => {
 			<Link href={`${to}/${item._id}`}>
 				<div className={styles.prod}>
 					<Image
+						unoptimized={true}
 						alt={item.name}
 						src={item.image}
 						width={150}

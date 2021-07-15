@@ -15,7 +15,13 @@ const CartPageItem = ({ item }) => {
 		<div className={styles.card}>
 			<div className={styles.image}>
 				<div className={styles.img}>
-					<Image src={item.image} height={100} width={100} objectFit='cover' />
+					<Image
+						unoptimized={true}
+						src={item.image}
+						height={100}
+						width={100}
+						objectFit='cover'
+					/>
 				</div>
 				<Link href={`/product/${item._id}`}>
 					<a>{item.name}</a>

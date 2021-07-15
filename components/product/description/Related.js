@@ -44,6 +44,7 @@ const Related = ({ items, product }) => {
 							<Link href={`/product/${item._id}`} key={i}>
 								<div className={styles.card}>
 									<Image
+										unoptimized={true}
 										alt={item.name}
 										src={item.image}
 										width={150}

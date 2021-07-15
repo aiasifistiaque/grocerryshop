@@ -19,7 +19,13 @@ const Menu = ({ id }) => {
 	return (
 		<div className={styles.menuSectionContainer}>
 			<div className={styles.overview}>
-				<Image src='/pp.svg' alt='Profile Picture' height={100} width={100} />
+				<Image
+					unoptimized={true}
+					src='/pp.svg'
+					alt='Profile Picture'
+					height={100}
+					width={100}
+				/>
 				<h3>{name}</h3>
 			</div>
 			<div className={styles.menu}>
